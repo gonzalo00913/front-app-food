@@ -45,10 +45,10 @@
   
   /* Responsive */
   
-  @media (max-width: 460px) {
+  @media (max-width: 480px) {
     .nav {
       background-color: #013c4d;
-      height: 60px;
+      height: 50px;
       padding: 6px;
       position: fixed;
       top: 0;
@@ -61,7 +61,7 @@
       margin: 5px;
       margin-top: 11px;
       text-decoration: none;
-      font-size: 21px;
+      font-size: 16px;
     }
     
     .containerLinks {
@@ -81,9 +81,42 @@
     
   }
   
-  /* @media screen and (min-width: 301px) and (max-width: 650px) {
-  
-  } */
+  @media screen and (min-width: 480px) and (max-width: 662px) {
+    .nav {
+      background-color: #013c4d;
+      height: 50px;
+      padding: 5px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .link {
+      color: #f7edc7;
+      margin: 5%;
+      margin-top: 11px;
+      text-decoration: none;
+      font-size: 19px;
+    }
+    
+    .containerLinks {
+      display: flex;
+      
+    }
+    
+    .searchBar {
+      margin-top: 10px;
+      margin-left: 20px;
+      
+    }
+    
+    .containerNavSearch {
+      display: flex;
+      justify-content: space-around;
+     
+    }
+  }
   
   
   /* @media screen and (min-width: 601px) and (max-width: 800px) {

@@ -1,45 +1,107 @@
-.searchBar{
-    background-color: #f7eec7;
-    height: 26px;
-    font-size: 22px;
-    border-radius:10px ;
-    border: none;
+.searchBar {
+  background-color: #f7eec7;
+  height: 26px;
+  font-size: 22px;
+  border-radius: 10px;
+  border: none;
 }
-.buttom{
-    background-color: #34aa22;
-    color: #f7eec7;
-    font-size: 22px;
-    border-radius: 10px;
-    margin-left: 15px;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    border: none;
+.buttom {
+  background-color: #34aa22;
+  color: #f7eec7;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-left: 15px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  border: none;
 }
-.buttom:hover{
-    animation-name: color;
-    animation-duration: 100ms;
-    animation-fill-mode: forwards;
-    background-color: #59bb4a;
+.buttom:hover {
+  animation-name: color;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+  background-color: #59bb4a;
 }
 
-
-
-@media (max-width: 460px) {
-.searchBar{
-    width: 50%;
+@media (max-width: 300px) {
+  .searchBar {
+    width: 40%;
     height: 20px;
-    font-size: 19px;
-    border-radius:10px;
-}
+    font-size: 12px;
+    border-radius: 10px;
+  }
 
-.buttom{
+  .buttom {
     background-color: #34aa22;
     color: #f7eec7;
-    padding: 3px;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 10px;
-    margin-left: 5px;
-    height: 25px;
+    margin-left: 2px;
+    height: 20px;
     margin-top: 3px;
-
-}
   }
+}
+
+@media (max-width: 300px) {
+  .searchBar {
+    width: 40%;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .buttom {
+    background-color: #34aa22;
+    color: #f7eec7;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-left: 2px;
+    height: 20px;
+    margin-top: 3px;
+  }
+}
+@media (max-width: 480px) {
+  .searchBar {
+    width: 40%;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .buttom {
+    background-color: #34aa22;
+    color: #f7eec7;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-left: 2px;
+    height: 20px;
+    margin-top: 3px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 662px) {
+    .searchBar {
+        width: 100%;
+        height: 20px;
+        font-size: 12px;
+        border-radius: 10px;
+        
+      }
+    
+      .buttom {
+        background-color: #34aa22;
+        color: #f7eec7;
+        font-size: 16px;
+        border-radius: 10px;
+        margin-left: 1px;
+        height: 20px;
+        
+        
+      }
+  
+  } 
+  
+
+/* @media screen and (min-width: 601px) and (max-width: 800px) {
+     
+  
+  } 
+   */
