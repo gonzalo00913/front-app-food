@@ -12,7 +12,7 @@
     color: #f7edc7;
     margin: 15px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 25px;
     text-shadow: 4px 4px 6px rgb(0, 0, 0);
   
   }
@@ -58,9 +58,10 @@
     
     .link {
       color: #f7edc7;
-      margin: 10px;
+      margin: 5px;
+      margin-top: 11px;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 21px;
     }
     
     .containerLinks {
