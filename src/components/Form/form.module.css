@@ -1,0 +1,67 @@
+.form {
+  background-color: #013c4d;
+  text-align: center;
+  width: 450px;
+  margin: auto;
+ 
+  border-radius: 10px;
+  border: 2px solid #f7edc7;
+  padding: 25px;
+}
+
+.formContainer {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  font-size: 22px;
+}
+
+.labelDiets {
+  font-size: 20px;
+  margin: 10px;
+}
+.h1 {
+  color: #f7edc7;
+  text-shadow: 4px 4px 6px rgb(0, 0, 0);
+  font-size: 45px;
+}
+
+.input {
+  width: 60%;
+  height: 20px;
+  margin: 5px;
+  font-size: 20px;
+  background-color: #0e0f1049;
+  color: #f7edc7;
+  border-radius:5px ;
+}
+
+.inputImage{
+    width: 30%;
+    height: 30px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: #0e0f1049;
+    color: #f7edc7;
+    border-radius:5px ;
+}
+
+.imageURL{
+    width: 200px;
+}
+
+.button{
+    margin-top: 65px;
+    width: 40%;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #f7edc7;
+    background-color: #34aa22;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}

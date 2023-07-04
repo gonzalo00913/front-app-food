@@ -1,0 +1,19 @@
+.pagination{
+    text-align: center;
+    padding-bottom: 80px;
+    margin-top: 50px;
+
+}
+
+.PaginadoBtn{
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 17px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.PaginadoBtnClic{
+    font-size: 18px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background-color: #1e6376;
+    color: white;
+}

@@ -1,0 +1,10 @@
+
+
+.containerHome{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 1450px;
+    margin: auto;
+    
+}

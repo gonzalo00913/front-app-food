@@ -1,0 +1,37 @@
+.card {
+    width: 480px;
+    text-align: center;
+    padding: 1px;
+    margin-top: 25px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin-bottom: 20px;
+  
+  }
+  .cardImage {
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin: 20px;
+    border: 2px solid #f7edc7 ;
+  }
+  
+  .card {
+    position: relative;
+  }
+  
+  .cardName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    border-radius: 5px;
+  }
+  
+  .cardName:hover{
+    color: #de5732;
+  }

@@ -1,0 +1,41 @@
+.searchBar{
+    background-color: #f7eec7;
+    height: 18px;
+    font-size: 20px;
+    border-radius:10px ;
+ 
+}
+.buttom{
+    background-color: #34aa22;
+    color: #f7eec7;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 3px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+.buttom:hover{
+    animation-name: color;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+    background-color: #59bb4a;
+}
+
+
+
+@media (max-width: 460px) {
+.searchBar{
+    width: 65%;
+    height: 14px;
+    font-size: 19px;
+    border-radius:10px;
+}
+
+.buttom{
+    background-color: #34aa22;
+    color: #f7eec7;
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 1px;
+
+}
+  }

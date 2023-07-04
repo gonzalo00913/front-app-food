@@ -1,0 +1,144 @@
+.parrafo {
+  width: 550px;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  color: #f7edc7;
+}
+
+.containertitleParrafo {
+  margin-left: 80px;
+  position: fixed;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 52px;
+  text-shadow: 4px 4px 6px rgb(0, 0, 0);
+  color: #f7edc7;
+}
+
+.boton {
+  background-color:#013c4d;
+  color: #f7edc7;
+  list-style: none;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  
+}
+
+.boton:hover {
+  animation-name: color;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+  background-color: #1e6376;
+}
+
+
+/* Responsive */
+@media (max-width: 300px) {
+  .parrafo {
+    width:240px;
+    margin: auto;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 6px 6px 10px rgb(13, 13, 13);
+    color: #f7edc7;
+    height: 350px;
+    
+  }
+  
+  .containertitleParrafo {
+    margin-top: 50px;
+    width: 300px;
+
+    margin: auto;
+  }
+  
+  .title {
+    font-size: 48px;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+    color: #f7edc7;
+    margin-top: 100px;
+    margin-left: 20px;
+  }
+  
+  .boton {
+    background-color:#013c4d;
+    color: #f7edc7;
+    list-style: none;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+    margin-left: 100px;
+    
+  }
+  
+  .boton:hover {
+    animation-name: color;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+    background-color: #1e6376;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 650px) {
+    .parrafo {
+    margin: auto;
+    width: 80%;
+    margin: auto;
+    font-size: 27px;
+    text-shadow: 6px 6px 10px rgb(13, 13, 13);
+    color: #f7edc7;
+
+    margin-bottom: 40px;
+    }
+  
+  .containertitleParrafo {
+    margin-top: 50px;
+    margin: auto;
+
+
+  }
+  
+  .title {
+    font-size: 48px;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+    color: #f7edc7;
+    margin-top: 100px;
+    margin-left: 10%;
+  }
+  
+  .boton {
+    background-color:#013c4d;
+    color: #f7edc7;
+    list-style: none;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+    margin-left: 10%;
+  
+  }
+  
+  .boton:hover {
+    animation-name: color;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+    background-color: #1e6376;
+  }
+}
+
+
+/* @media screen and (min-width: 601px) and (max-width: 800px) {
+   
+
+} 
+ */
+
+
