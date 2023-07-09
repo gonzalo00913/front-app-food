@@ -4,17 +4,17 @@
   padding: 1px;
   margin-top: 25px;
   border-radius: 10px;
-  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+
   margin-bottom: 20px;
 
   
 }
 .cardImage {
-  border-radius: 10px;
-  width: 400px;
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 380px;
+
   margin: 20px;
-  border: 3px solid #047808 ;
+  border: 2px solid #047808 ;
  
 }
 
@@ -43,8 +43,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  text-shadow: 2px 2px 8px rgb(0, 0, 0);
-  color: #f7edc7 ;
+
+  color: #2e2d2d ;
   
 }
 

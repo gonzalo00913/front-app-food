@@ -1,10 +1,80 @@
 .parrafo {
   width: 550px;
-  font-size: 28px;
-  text-shadow: 2px 2px 4px rgb(0, 0, 0);
-  color: #f7edc7;
+  font-size: 25px;
+  color: #2e2d2d;
+  margin: auto;
+  text-align: center;
 }
 
+.h1{
+  color: #2e2d2d;
+  text-align: center;
+ 
+}
+
+.containerColor{
+  display: flex;
+  height: 100vh;
+}
+
+.containerColorOne{
+  background-color: #ecf2f9;
+  width: 50%;
+
+}
+
+.containerColortwo{
+
+background-color: #c8d9eb;
+width: 70%;
+}
+
+.logoInicio{
+  width: 300px;
+}
+.imgIncioFood{
+  width: 100%;
+  height: 99vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.boton {
+  background-color:#006605;
+  border: 3px solid #008c07 ;
+  color: #f7edc7;
+  list-style: none;
+  text-decoration: none;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 5px;
+
+
+}
+.containerBtnImg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 115px;
+}
+
+
+
+.boton:hover {
+  animation-name: color;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+  color: #e85f1e;
+}
+
+.containerh1Parrafo{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+  margin-top: 110px;
+}
+/* 
 .containertitleParrafo {
   margin-left: 80px;
   position: fixed;
@@ -17,28 +87,13 @@
   color: #f7edc7;
 }
 
-.boton {
-  background-color:#013c4d;
-  color: #f7edc7;
-  list-style: none;
-  text-decoration: none;
-  font-size: 30px;
-  border-radius: 10px;
-  padding: 6px;
-  box-shadow: 2px 2px 4px rgb(0, 0, 0);
-  
-}
 
-.boton:hover {
-  animation-name: color;
-  animation-duration: 100ms;
-  animation-fill-mode: forwards;
-  background-color: #1e6376;
-}
 
+
+ */
 
 /* Responsive */
-@media (max-width: 300px) {
+/* @media (max-width: 300px) {
   .parrafo {
     width:240px;
     margin: auto;
@@ -132,7 +187,7 @@
     animation-fill-mode: forwards;
     background-color: #1e6376;
   }
-}
+} */
 
 
 /* @media screen and (min-width: 601px) and (max-width: 800px) {

@@ -7,7 +7,7 @@ import Style from "../Home/home.module.css";
 import Filter from "../Filter/Filter";
 
 const Home = ({ recipes, getAllRecipes }) => {
-  console.log("hola",recipes);
+  console.log("hola", recipes);
   const [currentPage, setCurrentPage] = useState(1);
   const [orden, setOrden] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -45,28 +45,28 @@ const Home = ({ recipes, getAllRecipes }) => {
   return (
     <div>
       {/* <h1 className={Style.recipes}>Food recipes</h1> */}
-  
+
       <div>
         {isLoading ? (
-      <div className={Style.loader}>loading...</div>
+          <div className={Style.loader}>loading...</div>
         ) : (
           <div>
-              <div className={Style.containerHomeColor}>
-            <Filter
-              setCurrentPage={setCurrentPage}
-              setOrden={setOrden}
-              orden={orden}
-            />
-          
-            <div className={Style.containerHome}>
-              {currentRecipes.length > 0 ? (
-                currentRecipes.map((recipe) => (
-                  <Card recipe={recipe} key={recipe.id} />
-                ))
-              ) : (
-                <p>Recipe name not found!</p>
-              )}
-            </div>
+            <div className={Style.containerHomeColor}>
+              <Filter
+                setCurrentPage={setCurrentPage}
+                setOrden={setOrden}
+                orden={orden}
+              />
+
+              <div className={Style.containerHome}>
+                {currentRecipes.length > 0 ? (
+                  currentRecipes.map((recipe) => (
+                    <Card recipe={recipe} key={recipe.id} />
+                  ))
+                ) : (
+                  <p>Recipe name not found!</p>
+                )}
+              </div>
             </div>
             <Paginado
               currentPage={currentPage}
@@ -74,7 +74,6 @@ const Home = ({ recipes, getAllRecipes }) => {
               onPageChange={handlePageChange}
             />
           </div>
-          
         )}
       </div>
     </div>
