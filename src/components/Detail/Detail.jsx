@@ -13,25 +13,38 @@ import Style from "../Detail/detail.module.css"
   useEffect(() => {
     dispatch(getRecipesById(id));
   }, [dispatch, id]);
-
+  console.log(data)
   return (
+
+    <div>
+    
     <div className={Style.containerDetail}>
-      <Link to="/home">
-        <button type="button" className="btn btn-secondary">
-          Back
+     
+      {data && (
+        <div className={Style.containerDetails}>
+        <div className={Style.containerTitleImg}>
+          <h2 className={Style.h2}>{data.name}</h2>
+          <img className={Style.img} src={data.image} alt={data.name} />
+   
+       </div>
+       <div className={Style.containerResume}>
+          <p>Summary: {data.summary}</p>
+          <p>Health Score: {data.healthScore}</p>
+          <p>Steps: {data.steps}</p>
+          Type of diet:
+          {
+            data.Diets?.map((diet) => <span key={diet.id} >{diet.name}</span>)
+          }
+          </div>
+        </div>
+      )}
+      <div className={Style.parrafo}></div>
+    </div>
+    <Link to="/home">
+        <button type="button" className={Style.btnBack}>
+        🢀
         </button>
       </Link>
-      <div>
-      <h2>{data.name}</h2>
-      <p>Health Score: {data.healthScore}</p>
-      <p>Punctuation: {data.spoonacularScore}</p>
-      <img src={data.image} alt={data.name} />
-      <p>type of diet: {data.diets}</p>
-      </div>
-      <div className={Style.parrafo}>
-      <p>steps: {data.steps}</p>
-      <p>Resume: {data.resume}</p>
-      </div>
     </div>
   );
 }

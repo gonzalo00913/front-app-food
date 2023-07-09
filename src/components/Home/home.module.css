@@ -1,3 +1,5 @@
+
+
 .containerHome{
     display: flex;
     justify-content: space-evenly;
@@ -7,25 +9,22 @@
     
 }
 
-/* Responsive */
-/* @media (max-width: 300px) {
-    .containerHome{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        width: 0px;
-        margin: auto;
-        
+@keyframes animate8345 {
+    0%,100% {
+      filter: hue-rotate(0deg);
+    }
+  
+    50% {
+      filter: hue-rotate(360deg);
     }
   }
   
-  @media screen and (min-width: 301px) and (max-width: 650px) {
-   
+/*   .loader {
+    color: transparent;
+    background: linear-gradient(to right, #2d60ec, #3ccfda);
+    font-size: 30px;
+    background-clip: text;
+    animation: animate8345 9s linear infinite;
+    font-weight: bold;
+    position: absolute;
   } */
-  
-  
-  /* @media screen and (min-width: 601px) and (max-width: 800px) {
-     
-  
-  } 
-   */

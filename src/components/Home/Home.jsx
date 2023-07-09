@@ -7,13 +7,21 @@ import Style from "../Home/home.module.css";
 import Filter from "../Filter/Filter";
 
 const Home = ({ recipes, getAllRecipes }) => {
+  console.log("hola",recipes);
   const [currentPage, setCurrentPage] = useState(1);
   const [orden, setOrden] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const recipesPerPage = 9;
 
   useEffect(() => {
     getAllRecipes();
   }, [getAllRecipes]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+  }, []);
 
   // Lógica para obtener las recetas de la página actual
   const indexOfLastRecipe = currentPage * recipesPerPage;
@@ -23,7 +31,9 @@ const Home = ({ recipes, getAllRecipes }) => {
     setCurrentPage(1); // Reiniciar la página a la primera cuando se actualiza el estado recipes
   }, [recipes]);
 
-  const currentRecipes = recipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
+  const currentRecipes = Array.isArray(recipes)
+    ? recipes.slice(indexOfFirstRecipe, indexOfLastRecipe)
+    : [];
 
   const totalPages = Math.ceil(recipes.length / recipesPerPage);
 
@@ -34,22 +44,39 @@ const Home = ({ recipes, getAllRecipes }) => {
 
   return (
     <div>
-      <Filter
-        setCurrentPage={setCurrentPage}
-        setOrden={setOrden}
-        orden={orden}
-      />
-   
-      <div className={Style.containerHome}>
-        {currentRecipes.map((recipe) => (
-          <Card recipe={recipe} key={recipe.id} />
-        ))}
+      {/* <h1 className={Style.recipes}>Food recipes</h1> */}
+  
+      <div>
+        {isLoading ? (
+      <div className={Style.loader}>loading...</div>
+        ) : (
+          <div>
+              <div className={Style.containerHomeColor}>
+            <Filter
+              setCurrentPage={setCurrentPage}
+              setOrden={setOrden}
+              orden={orden}
+            />
+          
+            <div className={Style.containerHome}>
+              {currentRecipes.length > 0 ? (
+                currentRecipes.map((recipe) => (
+                  <Card recipe={recipe} key={recipe.id} />
+                ))
+              ) : (
+                <p>Recipe name not found!</p>
+              )}
+            </div>
+            </div>
+            <Paginado
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+            />
+          </div>
+          
+        )}
       </div>
-      <Paginado
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
     </div>
   );
 };

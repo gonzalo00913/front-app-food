@@ -1,16 +1,33 @@
-.containerDetail{
-
-    color:black;
-    text-align: center;
-   
-    background-color: #97cba9;
+.containerDetail {
+  color: white;
+  text-align: center;
+  width: 1600px;
+  margin: auto;
 }
 
-.parrafo{
-    font-size: 22px;
-    width: 1200px;
-    margin: auto;
-    color: white;
-    
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+.containerDetails {
+  display: flex;
+  margin-top: 80px;
+}
+.img {
+  width: 750px;
+  border-radius: 12px;
+  border: 2px solid #f7edc7;
+}
+.containerResume {
+  margin-top: 70px;
+  margin-left: 30px;
+  text-align: left;
+  color: #f7edc7;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.h2 {
+  text-align: left;
+  color: #f7edc7;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.btnBack {
+  font-size: 25px;
+  margin-top: 130px;
+  margin-left: 160px;
 }

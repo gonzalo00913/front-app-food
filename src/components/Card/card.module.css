@@ -1,119 +1,50 @@
 .card {
-    width: 480px;
-    text-align: center;
-    padding: 1px;
-    margin-top: 25px;
-    border-radius: 10px;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    margin-bottom: 20px;
-  
-  }
-  .cardImage {
-    border-radius: 10px;
-    width: 400px;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
-    margin: 20px;
-    border: 2px solid #f7edc7 ;
-  }
-  
-  .card {
-    position: relative;
-  }
-  
-  .cardName {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    border-radius: 5px;
-  }
-  
-  .cardName:hover{
-    color: #de5732;
-  }
+  width: 450px;
+  text-align: center;
+  padding: 1px;
+  margin-top: 25px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  margin-bottom: 20px;
 
-  /* Responsive */
-@media (max-width: 300px) {
-  .card {
-    width: 200px;
-    text-align: center;
-    padding: 1px;
-    margin-top: 25px;
-    border-radius: 10px;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    margin-bottom: 20px;
   
-  }
-  .cardImage {
-    border-radius: 10px;
-    width: 200px;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
-    margin: auto;
-    border: 2px solid #f7edc7 ;
-  }
-  
-  .card {
-    position: relative;
-  }
-  
-  .cardName {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 16px;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    border-radius: 5px;
-  }
+}
+.cardImage {
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  margin: 20px;
+  border: 3px solid #047808 ;
+ 
 }
 
-@media screen and (min-width: 301px) and (max-width: 400px) {
-  .card {
-    display: flex;
-    flex-direction: column;
-    width:200px;
-
-    padding: 1px;
-    margin-top: 25px;
-    border-radius: 10px;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    margin-bottom: 20px;
-  
-  }
-  .cardImage {
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
-    margin: auto;
-    border: 2px solid #f7edc7 ;
-  }
-  
-  .card {
-    position: relative;
-  }
-  
-  .cardName {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 16px;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    border-radius: 5px;
-  }
+.card {
+  position: relative;
 }
 
+.cardName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  border-radius: 5px;
 
-/* @media screen and (min-width: 601px) and (max-width: 800px) {
-   
+}
 
-} 
- */
+.cardName:hover{
+  color: #de5732;
+}
+
+.li{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-shadow: 2px 2px 8px rgb(0, 0, 0);
+  color: #f7edc7 ;
+  
+}
+

@@ -1,3 +1,4 @@
+import React from "react";
 import Style from "../Paginado/paginado.module.css";
 
 const Paginado = ({ currentPage, totalPages, onPageChange }) => {
@@ -38,9 +39,38 @@ const Paginado = ({ currentPage, totalPages, onPageChange }) => {
 
   return (
     <div className={Style.pagination}>
-      <div>{pageButtons}</div>
+      <button
+        className={Style.PaginadoBtn}
+        onClick={() => onPageChange(1)}
+        disabled={currentPage === 1}
+      >
+        &lt;&lt;
+      </button>
+      <button
+        className={Style.PaginadoBtn}
+        onClick={() => onPageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+      >
+        &lt;
+      </button>
+      <div className={Style.pageButtonsContainer}>{pageButtons}</div>
+      <button
+        className={Style.PaginadoBtn}
+        onClick={() => onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+      >
+        &gt;
+      </button>
+      <button
+        className={Style.PaginadoBtn}
+        onClick={() => onPageChange(totalPages)}
+        disabled={currentPage === totalPages}
+      >
+        &gt;&gt;
+      </button>
     </div>
   );
 };
 
 export default Paginado;
+

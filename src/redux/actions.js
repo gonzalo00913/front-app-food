@@ -15,7 +15,6 @@ import axios from "axios";
 export const getAllRecipes = () => {
   return async function (dispatch) {
     try {
-      /* const response = await axios("http://localhost:3001/recipes/all"); */
       const response = await axios("https://back-food-app-9rem.onrender.com/recipes/all");
       const recipes = response.data;
 
@@ -36,10 +35,8 @@ export const getAllRecipes = () => {
 export const getRecipesById = (id) => {
   return async function (dispatch) {
     try {
-     /*  const response = await axios.get(`http://localhost:3001/recipes/${id}`); */
       const response = await axios.get(`https://back-food-app-9rem.onrender.com/recipes/${id}`);
       const recipe = response.data;
-
       dispatch({
         type: GET_BY_ID,
         payload: recipe,
@@ -53,8 +50,10 @@ export const getRecipesById = (id) => {
 export const createRecipe = (payload) => {
   return async function (dispatch) {
     try {
-      /* const response = await axios.post("http://localhost:3001/recipes/post", payload); */
-      const response = await axios.post("https://back-food-app-9rem.onrender.com/recipes/post", payload);
+      const response = await axios.post(
+        "https://back-food-app-9rem.onrender.com/recipes/post",
+        payload
+      );
       const newRecipe = response.data;
 
       dispatch({
@@ -71,8 +70,9 @@ export const createRecipe = (payload) => {
 export const getRecipesByName = (name) => {
   return async function (dispatch) {
     try {
-      /* const response = await axios.get(`http://localhost:3001/recipes?name=${name}`); */
-      const response = await axios.get(`https://back-food-app-9rem.onrender.com/recipes?name=${name}`);
+      const response = await axios.get(
+        `https://back-food-app-9rem.onrender.com/recipes?name=${name}`
+      );
       const recipes = response.data;
 
       dispatch({
@@ -117,7 +117,6 @@ export const orderByPuntuation = (payload) => {
 export const getTypeDiets = () => {
   return async function (dispatch) {
     try {
-      /* const response = await axios.get("http://localhost:3001/types"); */
       const response = await axios.get("https://back-food-app-9rem.onrender.com/types");
       const dietTypes = response.data;
 
@@ -130,3 +129,4 @@ export const getTypeDiets = () => {
     }
   };
 };
+

@@ -9,7 +9,7 @@ import Form from "./components/Form/Form"
 
 function App() {
   const { pathname } = useLocation();
-  const hideNav = pathname === "/" || pathname.includes("/detail/") || pathname.includes("/About") ;
+  const hideNav = pathname === "/" || pathname.includes("/detail/") || pathname.includes("/About")  || pathname.includes("/Form") ;
 
   return (
     <div>

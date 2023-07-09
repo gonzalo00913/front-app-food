@@ -46,15 +46,12 @@
     text-align: center;
     text-shadow: 6px 6px 10px rgb(13, 13, 13);
     color: #f7edc7;
-    background-color:#013d4dbc;
-    border-radius: 10px;
-    padding: 10px;
     height: 350px;
     
   }
   
   .containertitleParrafo {
-    margin-top: 10px;
+    margin-top: 50px;
     width: 300px;
 
     margin: auto;
@@ -64,7 +61,7 @@
     font-size: 48px;
     text-shadow: 4px 4px 6px rgb(0, 0, 0);
     color: #f7edc7;
-    margin-top: 30px;
+    margin-top: 100px;
     margin-left: 20px;
   }
   
@@ -97,9 +94,7 @@
     font-size: 27px;
     text-shadow: 6px 6px 10px rgb(13, 13, 13);
     color: #f7edc7;
-    background-color:#013d4dbc;
-    border-radius: 10px;
-    padding: 10px;
+
     margin-bottom: 40px;
     }
   
@@ -114,9 +109,8 @@
     font-size: 48px;
     text-shadow: 4px 4px 6px rgb(0, 0, 0);
     color: #f7edc7;
-    margin-top: 30px;
-    margin-left: 8%;
-    
+    margin-top: 100px;
+    margin-left: 10%;
   }
   
   .boton {
@@ -128,7 +122,7 @@
     border-radius: 10px;
     padding: 6px;
     box-shadow: 2px 2px 4px rgb(0, 0, 0);
-    margin-left: 8%;
+    margin-left: 10%;
   
   }
   
@@ -146,5 +140,6 @@
 
 } 
  */
+
 
 

@@ -23,13 +23,16 @@ const SearchBar = () => {
     }
   };
   return (
-    <div>
+    <div className={Style.containerBtnSearchBar}>
+      <div>
       <input className={Style.searchBar}
         placeholder="Search recipe..."
         value={name}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
       />
+   </div>
+      <div>
       <button
         className={Style.buttom}
         type="submit"
@@ -37,6 +40,7 @@ const SearchBar = () => {
       >
         Search
       </button>
+      </div>
     </div>
   );
 };

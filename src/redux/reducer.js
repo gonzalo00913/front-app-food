@@ -8,14 +8,14 @@ export const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case "POST_RECIPE":
-      const newRecipe = action.payload;
-      const updatedRecipes = [...state.recipes, newRecipe];
+   case "POST_RECIPE":
+  const newRecipe = action.payload;
+  const updatedRecipes = [...state.recipes, newRecipe];
 
-      return {
-        ...state,
-        recipes: updatedRecipes,
-      };
+  return {
+    ...state,
+    recipes: updatedRecipes,
+  };
     case "GET_ALL_RECIPES":
       return {
         ...state,
@@ -29,14 +29,15 @@ function reducer(state = initialState, action) {
       };
     
       case "FILTER_BY_TYPEDIET":
-      const allRecDiet = state.allRecipes;
-      const typeDietFilter = allRecDiet.filter((recipes) => {
-        return recipes.diets && recipes.diets.includes(action.payload);
-      });
-      return {
-        ...state,
-        recipes: action.payload === "All" ? allRecDiet : typeDietFilter,
-      };
+        const allRecDiet = state.allRecipes;
+        const typeDietFilter = allRecDiet.filter((recipe) => {
+          return recipe.Diets && recipe.Diets.some((diet) => diet.name === action.payload);
+        });
+        return {
+          ...state,
+          recipes: action.payload === "All" ? allRecDiet : typeDietFilter,
+        };
+      
 
     case "FILTER_CREATED":
       const allRecipes = state.allRecipes;
@@ -103,7 +104,7 @@ function reducer(state = initialState, action) {
     case "GET_BY_NAME":
       return {
         ...state,
-        recipes: action.payload,
+        recipes: action.payload || [],
       };
     case "GET_BY_ID":
       return {
