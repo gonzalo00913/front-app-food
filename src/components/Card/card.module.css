@@ -1,25 +1,22 @@
 .card {
-  width: 450px;
+  width: 100%;
   text-align: center;
   padding: 1px;
   margin-top: 25px;
   border-radius: 10px;
-
   margin-bottom: 20px;
 
-  
 }
 .cardImage {
-  border-radius: 5px;
-  width: 380px;
-
-  margin: 20px;
-  border: 2px solid #047808 ;
- 
+  border-radius: 2px;
+  width: 340px;
+  border: 2px solid #047808;
+  
 }
 
 .card {
-  position: relative;
+  position: relative; 
+  margin: 8px;
 }
 
 .cardName {
@@ -32,19 +29,16 @@
   font-size: 20px;
   text-shadow: 2px 2px 5px rgb(0, 0, 0);
   border-radius: 5px;
-
 }
 
-.cardName:hover{
+.cardName:hover {
   color: #de5732;
 }
 
-.li{
+.li {
   display: flex;
   flex-direction: row;
   justify-content: center;
 
-  color: #2e2d2d ;
-  
+  color: #2e2d2d;
 }
-

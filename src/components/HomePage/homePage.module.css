@@ -1,38 +1,39 @@
 .parrafo {
-  width: 550px;
+  width: 100%;
   font-size: 25px;
   color: #2e2d2d;
   margin: auto;
   text-align: center;
+  line-height: 1.5;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.h1{
+.h1 {
   color: #2e2d2d;
   text-align: center;
- 
+  font-size: 46px;
 }
 
-.containerColor{
+.containerColor {
   display: flex;
   height: 100vh;
 }
 
-.containerColorOne{
+.containerColorOne {
   background-color: #ecf2f9;
   width: 50%;
-
 }
 
-.containerColortwo{
-
-background-color: #c8d9eb;
-width: 70%;
+.containerColortwo {
+  background-color: #c8d9eb;
+  width: 70%;
 }
 
-.logoInicio{
+.logoInicio {
   width: 300px;
 }
-.imgIncioFood{
+.imgIncioFood {
   width: 100%;
   height: 99vh;
   object-fit: cover;
@@ -40,25 +41,22 @@ width: 70%;
 }
 
 .boton {
-  background-color:#006605;
-  border: 3px solid #008c07 ;
+  background-color: #006605;
+  border: 3px solid #008c07;
   color: #f7edc7;
   list-style: none;
   text-decoration: none;
   font-size: 24px;
   border-radius: 5px;
   padding: 5px;
-
-
+  box-shadow: 2px 2px 4px rgb(28, 28, 28);
 }
-.containerBtnImg{
+.containerBtnImg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 115px;
+  margin-top: 80px;
 }
-
-
 
 .boton:hover {
   animation-name: color;
@@ -67,134 +65,163 @@ width: 70%;
   color: #e85f1e;
 }
 
-.containerh1Parrafo{
+.containerh1Parrafo {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 70%;
   margin: auto;
-  margin-top: 110px;
-}
-/* 
-.containertitleParrafo {
-  margin-left: 80px;
-  position: fixed;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
-.title {
-  font-size: 52px;
-  text-shadow: 4px 4px 6px rgb(0, 0, 0);
-  color: #f7edc7;
-}
-
-
-
-
- */
-
-/* Responsive */
-/* @media (max-width: 300px) {
+/* responsive */
+@media (max-width: 450px) {
   .parrafo {
-    width:240px;
-    margin: auto;
-    font-size: 25px;
+    width: 90%;
+    font-size: 20px;
+    color: #2e2d2d;
     text-align: center;
-    text-shadow: 6px 6px 10px rgb(13, 13, 13);
-    color: #f7edc7;
-    height: 350px;
-    
+    line-height: 1.5;
+    padding: 10px;
   }
-  
-  .containertitleParrafo {
-    margin-top: 50px;
-    width: 300px;
 
+  .h1 {
+    color: #2e2d2d;
+    font-size: 36px;
     margin: auto;
+    width: 100%;
   }
-  
-  .title {
-    font-size: 48px;
-    text-shadow: 4px 4px 6px rgb(0, 0, 0);
-    color: #f7edc7;
-    margin-top: 100px;
-    margin-left: 20px;
+  .containerColorOne {
+    background-color: #ecf2f9;
+    width: 100%;
   }
-  
-  .boton {
-    background-color:#013c4d;
-    color: #f7edc7;
-    list-style: none;
-    text-decoration: none;
-    font-size: 30px;
-    border-radius: 10px;
-    padding: 6px;
-    box-shadow: 2px 2px 4px rgb(0, 0, 0);
-    margin-left: 100px;
-    
+
+  .containerColortwo {
+    display: none;
   }
-  
-  .boton:hover {
-    animation-name: color;
-    animation-duration: 100ms;
-    animation-fill-mode: forwards;
-    background-color: #1e6376;
+
+  .logoInicio {
+    width: 300px;
+  }
+  .imgIncioFood {
+    width: 100%;
+    height: 99vh;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .containerBtnImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .containerh1Parrafo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
   }
 }
 
-@media screen and (min-width: 301px) and (max-width: 650px) {
-    .parrafo {
-    margin: auto;
-    width: 80%;
-    margin: auto;
-    font-size: 27px;
-    text-shadow: 6px 6px 10px rgb(13, 13, 13);
-    color: #f7edc7;
+@media screen and (min-width: 450px) and (max-width: 750px) {
+  .parrafo {
+    width: 90%;
+    font-size: 22px;
+    color: #2e2d2d;
+    text-align: center;
+    line-height: 1.5;
+    padding: 10px;
+  }
 
-    margin-bottom: 40px;
-    }
-  
-  .containertitleParrafo {
+  .h1 {
+    color: #2e2d2d;
+    font-size: 39px;
+    margin: auto;
+    width: 100%;
+  }
+  .containerColorOne {
+    background-color: #ecf2f9;
+    width: 100%;
+  }
+
+  .containerColortwo {
+    display: none;
+  }
+
+  .logoInicio {
+    width: 300px;
+  }
+  .imgIncioFood {
+    width: 100%;
+    height: 99vh;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .containerBtnImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .containerh1Parrafo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1550px) {
+  .parrafo {
+    width: 90%;
+    font-size: 24px;
+    color: #2e2d2d;
+    text-align: center;
+    line-height: 1.5;
+    padding: 10px;
+  }
+
+  .h1 {
+    color: #2e2d2d;
+    font-size: 42px;
     margin: auto;
-
-
+    width: 100%;
   }
-  
-  .title {
-    font-size: 48px;
-    text-shadow: 4px 4px 6px rgb(0, 0, 0);
-    color: #f7edc7;
-    margin-top: 100px;
-    margin-left: 10%;
+  .containerColorOne {
+    background-color: #ecf2f9;
+    width: 100%;
   }
-  
-  .boton {
-    background-color:#013c4d;
-    color: #f7edc7;
-    list-style: none;
-    text-decoration: none;
-    font-size: 30px;
-    border-radius: 10px;
-    padding: 6px;
-    box-shadow: 2px 2px 4px rgb(0, 0, 0);
-    margin-left: 10%;
-  
+
+  .containerColortwo {
+    background-color: #c8d9eb;
+    width: 70%;
   }
-  
-  .boton:hover {
-    animation-name: color;
-    animation-duration: 100ms;
-    animation-fill-mode: forwards;
-    background-color: #1e6376;
+
+  .logoInicio {
+    width: 300px;
   }
-} */
+  .imgIncioFood {
+    width: 100%;
+    height: 99vh;
+    object-fit: cover;
+    overflow: hidden;
+  }
 
+  .containerBtnImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
 
-/* @media screen and (min-width: 601px) and (max-width: 800px) {
-   
-
-} 
- */
-
-
+  .containerh1Parrafo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 80px;
+  }
+}
 

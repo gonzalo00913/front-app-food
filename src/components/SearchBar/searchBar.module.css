@@ -1,49 +1,151 @@
-.searchBar{
+.searchBar {
+  background-color: #f7eec7;
+  height: 22px;
+  font-size: 22px;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+.buttom {
+  background-color: #34aa22;
+  color: #f7eec7;
+  padding: 4px;
+  border-radius: 8px;
+  width: 60px;
+  height: 29px;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  margin-left: 10px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  font-size: 15px;
+}
+.buttom:hover {
+  animation-name: color;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+  background-color: #59bb4a;
+}
+.containerBtnSearchBar {
+  display: flex;
+}
+
+
+/* responsive */
+
+@media (max-width: 455px) {
+  .searchBar {
     background-color: #f7eec7;
-    height: 22px;
-    font-size: 22px;
-    border-radius:8px;
-    border: 2px solid black;
-    
-}
-.buttom{
-    background-color: #34aa22;
-    color: #f7eec7;
-    padding: 4px;
-    border-radius: 8px;
-    width: 60px;
-    height:29px;
-    box-shadow: 2px 2px 4px rgb(0, 0, 0);
-    margin-left: 10px;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    height: 15px;
     font-size: 15px;
-}
-.buttom:hover{
-    animation-name: color;
-    animation-duration: 100ms;
-    animation-fill-mode: forwards;
-    background-color: #59bb4a;
-   
-}
-.containerBtnSearchBar{
-    display: flex;
-}
+    border-radius: 8px;
+    border: 2px solid black;
+    width: 100%;
+    margin-left: 40px;
+  }
 
-
-@media (max-width: 460px) {
-.searchBar{
-    width: 65%;
-    height: 14px;
-    font-size: 19px;
-    border-radius:10px;
-}
-
-.buttom{
+  .buttom {
     background-color: #34aa22;
     color: #f7eec7;
-    padding: 3px;
-    border-radius: 10px;
-    margin-left: 1px;
-
-}
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 12px;
+    margin-right: 50px;
+    height: 23px;
   }
+  .containerBtnSearchBar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 455px) and (max-width: 725px) {
+    .searchBar {
+        background-color: #f7eec7;
+        height: 20px;
+        font-size: 15px;
+        border-radius: 8px;
+        border: 2px solid black;
+        width: 100%;
+        margin-left: 40px;
+      }
+    
+      .buttom {
+        background-color: #34aa22;
+        color: #f7eec7;
+        border-radius: 8px;
+        width: 50%;
+        box-shadow: 2px 2px 4px rgb(0, 0, 0);
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+        font-size: 12px;
+        margin-right: 50px;
+        height: 26px;
+      }
+      .containerBtnSearchBar {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+}
+
+@media screen and (min-width: 725px) and (max-width: 950px) {
+    .searchBar {
+        background-color: #f7eec7;
+        height: 20px;
+        font-size: 15px;
+        border-radius: 8px;
+        border: 2px solid black;
+        width: 100%;
+        margin-left: 40px;
+      }
+    
+      .buttom {
+        background-color: #34aa22;
+        color: #f7eec7;
+        border-radius: 8px;
+        width: 50%;
+        box-shadow: 2px 2px 4px rgb(0, 0, 0);
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+        font-size: 12px;
+        margin-right: 50px;
+        height: 26px;
+      }
+      .containerBtnSearchBar {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1600px) {
+    .searchBar {
+        background-color: #f7eec7;
+        height: 20px;
+        font-size: 15px;
+        border-radius: 8px;
+        border: 2px solid black;
+        width: 100%;
+        margin-left: 40px;
+      }
+    
+      .buttom {
+        background-color: #34aa22;
+        color: #f7eec7;
+        border-radius: 8px;
+        width: 50%;
+        box-shadow: 2px 2px 4px rgb(0, 0, 0);
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+        font-size: 12px;
+        margin-right: 50px;
+        height: 26px;
+      }
+      .containerBtnSearchBar {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+}
