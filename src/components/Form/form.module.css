@@ -1,202 +1,398 @@
+.h1 {
+  color: #2e2d2d;
+  font-size: 45px;
+  margin-right:200px ;
+  margin-top: 50px;
+
+
+}
 .form {
-  background-color: #013c4d;
+  background-color: #ecf2f9;
   text-align: center;
-  width: 450px;
+  width: 35%;
   margin: auto;
-  border-radius: 10px;
-  border: 2px solid #f7edc7;
-  padding: 35px;
+  border-radius: 4px;
+  padding: 45px;
+  margin-top: 60px;
 }
 
 .formContainer {
-  margin-top: 5px;
   text-align: center;
+  background-color: #c8d9eb;
+  min-height: 100vh;
+  margin: auto;
+  padding: 10px;
 }
 
 .label {
   display: flex;
   flex-direction: column;
-  margin: 5px;
-  font-size: 20px;
+  margin: 10px;
+  font-size: 21px;
+  color: #2e2d2d;
 }
 
 .labelDiets {
-  font-size: 20px;
-  margin: 10px;
-}
-.h1 {
-  color: #f7edc7;
-  text-shadow: 4px 4px 6px rgb(0, 0, 0);
-  font-size: 38px;
-  margin-right:150px ;
+  font-size: 21px;
+  margin: 5px;
 }
 
 .input {
-  width: 60%;
-  height: 20px;
-  margin: 5px;
-  font-size: 18px;
-  background-color: #0e0f1049;
-  color: #f7edc7;
-  border-radius:5px ;
+  width: 70%;
+  height: 25px;
+  margin: 6px;
+  font-size: 19px;
+
+  color: #2e2d2d;
+  border-radius: 5px;
 }
 
-.inputImage{
-    width: 30%;
+.inputImage {
+  width: 80%;
+  height: 30px;
+  margin: 5px;
+  font-size: 20px;
+  background-color: #0e0f1049;
+  color: #f7edc7;
+  border-radius: 5px;
+}
+
+.imageURL {
+  width: 181px;
+}
+
+.button {
+  margin-top: 65px;
+  width: 40%;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #f7edc7;
+  background-color: #34aa22;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.textarea {
+  width: 100%;
+  height: 55px;
+  margin: auto;
+}
+
+.containerTextBtn {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.btn {
+  width: 20%;
+  margin: auto;
+  background-color: #34aa22;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  color: #f7edc7;
+  border-radius: 10px;
+}
+.btnBack {
+  float: left;
+  margin-top: 20px;
+  margin-left: 6%;
+  font-size: 25px;
+  position: relative;
+}
+
+/* responsive */
+
+@media (max-width: 420px) {
+  .h1 {
+    color: #2e2d2d;
+    font-size: 25px;
+    width: 330px;
+  }
+  .form {
+    background-color: #ecf2f9;
+    text-align: center;
+    width: 220px;
+    margin: auto;
+    border-radius: 4px;
+
+    padding: 30px;
+    margin-top: 90px;
+  }
+
+  .formContainer {
+    text-align: center;
+    background-color: #c8d9eb;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    font-size: 19px;
+    color: #2e2d2d;
+  }
+
+  .labelDiets {
+    font-size: 21px;
+    margin: 5px;
+  }
+
+  .input {
+    width: 80%;
+    height: 20px;
+    margin: 2px;
+    font-size: 19px;
+
+    color: #2e2d2d;
+    border-radius: 5px;
+  }
+
+  .inputImage {
+    width: 100%;
     height: 30px;
     margin: 5px;
     font-size: 20px;
     background-color: #0e0f1049;
     color: #f7edc7;
-    border-radius:5px ;
-}
+    border-radius: 5px;
+  }
 
-.imageURL{
-    width: 200px;
-}
+  .imageURL {
+    width: 181px;
+  }
 
-.button{
+  .button {
     margin-top: 65px;
-    width: 40%;
+    width: 60%;
     padding: 5px;
     font-size: 20px;
     border-radius: 10px;
     color: #f7edc7;
     background-color: #34aa22;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-}
-
-.wrapper {
-  width: 200px;
-  height: 60px;
-  position: relative;
-  z-index: 1;
-  margin: auto;
-}
-
-.centerLoading{
-  margin-top: 350px;
-}
-.pLoading{
-  font-size: 24px;
-  text-shadow: 4px 4px 6px rgb(0, 0, 0);
-}
-.circle {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: #fff;
-  left: 15%;
-  transform-origin: 50%;
-  animation: circle7124 .5s alternate infinite ease;
-}
-
-@keyframes circle7124 {
-  0% {
-    top: 60px;
-    height: 5px;
-    border-radius: 50px 50px 25px 25px;
-    transform: scaleX(1.7);
   }
 
-  40% {
+  .textarea {
+    width: 100%;
+    height: 60px;
+    margin: auto;
+  }
+
+  .containerTextBtn {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .btn {
+    width: 50%;
+    margin: auto;
+    background-color: #34aa22;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    color: #f7edc7;
+    border-radius: 10px;
+  }
+  .btnBack {
+    float: left;
+    margin-top: 20px;
+    margin-left: 6%;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 600px) {
+  .h1 {
+    color: #2e2d2d;
+    font-size: 27px;
+    width: 430px;
+  }
+  .form {
+    background-color: #ecf2f9;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    border-radius: 4px;
+
+    padding: 30px;
+    margin-top: 90px;
+  }
+
+  .formContainer {
+    text-align: center;
+    background-color: #c8d9eb;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    font-size: 19px;
+    color: #2e2d2d;
+  }
+
+  .labelDiets {
+    font-size: 21px;
+    margin: 5px;
+  }
+
+  .input {
+    width: 80%;
     height: 20px;
-    border-radius: 50%;
-    transform: scaleX(1);
+    margin: 2px;
+    font-size: 19px;
+
+    color: #2e2d2d;
+    border-radius: 5px;
   }
 
-  100% {
-    top: 0%;
-  }
-}
-
-.circle:nth-child(2) {
-  left: 45%;
-  animation-delay: .2s;
-}
-
-.circle:nth-child(3) {
-  left: auto;
-  right: 15%;
-  animation-delay: .3s;
-}
-
-.shadow {
-  width: 20px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: rgba(0,0,0,0.9);
-  position: absolute;
-  top: 62px;
-  transform-origin: 50%;
-  z-index: -1;
-  left: 15%;
-  filter: blur(1px);
-  animation: shadow046 .5s alternate infinite ease;
-}
-
-@keyframes shadow046 {
-  0% {
-    transform: scaleX(1.5);
+  .inputImage {
+    width: 100%;
+    height: 30px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: #0e0f1049;
+    color: #f7edc7;
+    border-radius: 5px;
   }
 
-  40% {
-    transform: scaleX(1);
-    opacity: .7;
+  .imageURL {
+    width: 181px;
   }
 
-  100% {
-    transform: scaleX(.2);
-    opacity: .4;
+  .button {
+    margin-top: 65px;
+    width: 60%;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #f7edc7;
+    background-color: #34aa22;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+
+  .textarea {
+    width: 100%;
+    height: 60px;
+    margin: auto;
+  }
+
+  .containerTextBtn {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .btn {
+    width: 50%;
+    margin: auto;
+    background-color: #34aa22;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    color: #f7edc7;
+    border-radius: 10px;
+  }
+  .btnBack {
+    float: left;
+    margin-top: 20px;
+    margin-left: 6%;
+    font-size: 25px;
   }
 }
-
-.shadow:nth-child(4) {
-  left: 45%;
-  animation-delay: .2s
-}
-
-.shadow:nth-child(5) {
-  left: auto;
-  right: 15%;
-  animation-delay: .3s;
-}
-
-.formContainer{
-  animation: fade-in 1s ease-in;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .h1 {
+    color: #2e2d2d;
+    font-size: 27px;
+    width: 430px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .form {
+    background-color: #ecf2f9;
+    text-align: center;
+    width: 45%;
+    margin: auto;
+    border-radius: 4px;
+
+    padding: 35px;
+    margin-top: 90px;
   }
-}
 
-.textarea{
-  width: 400px;
-  height: 50px;
-  margin: auto;
-}
+  .formContainer {
+    text-align: center;
+    background-color: #c8d9eb;
+    min-height: 100vh;
+    width: 100%;
+  }
 
-.containerTextBtn{
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-}
-.btn{
-  width: 100px;
-  margin: auto;
-}
-.btnBack{
-  float: left;
-  margin-top: 20px;
-  margin-left: 100px;
-  font-size: 25px;
-  position: relative;
+  .label {
+    display: flex;
+    flex-direction: column;
+    margin: 9px;
+    font-size: 20px;
+    color: #2e2d2d;
+  }
+
+  .labelDiets {
+    font-size: 21px;
+    margin: 5px;
+  }
+
+  .input {
+    width: 80%;
+    height: 25px;
+    margin: 2px;
+    font-size: 19px;
+
+    color: #2e2d2d;
+    border-radius: 5px;
+  }
+
+  .inputImage {
+    width: 100%;
+    height: 30px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: #0e0f1049;
+    color: #f7edc7;
+    border-radius: 5px;
+  }
+
+  .imageURL {
+    width: 181px;
+  }
+
+  .button {
+    margin-top: 65px;
+    width: 60%;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #f7edc7;
+    background-color: #34aa22;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+
+  .textarea {
+    width: 100%;
+    height: 60px;
+    margin: auto;
+  }
+
+  .containerTextBtn {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .btn {
+    width: 50%;
+    margin: auto;
+    background-color: #34aa22;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    color: #f7edc7;
+    border-radius: 10px;
+  }
+  .btnBack {
+    float: left;
+    margin-top: 20px;
+    margin-left: 6%;
+    font-size: 25px;
+  }
 }

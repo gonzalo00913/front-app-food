@@ -32,7 +32,7 @@ const Filter = ({ setOrden, setCurrentPage }) => {
   return (
     <div className={Style.filterAllContainer}>
       <div className={Style.filterOneContainer}>
-          <label  htmlFor="filter-type-diet-select">Typediet</label>
+          <label className={Style.label} htmlFor="filter-type-diet-select">Typediet</label>
           <select className={Style.select} id="filter-type-diet-select"  onChange={(event) => handleFilterTypeDiet(event)}>
             <option value="All">All Recipes</option>
             <option  value="gluten free">Gluten Free</option>
@@ -51,7 +51,7 @@ const Filter = ({ setOrden, setCurrentPage }) => {
       
      
         <div className={Style.filterOneContainer}>
-          <label htmlFor="sort-select">Order</label>
+          <label className={Style.label} htmlFor="sort-select">Order</label>
           <select className={Style.select}  id="sort-select" onChange={(e) => handleSort(e)}>
             <option value="asc">Upward (A-Z)</option>
             <option value="des">Falling (Z-A)</option>
@@ -59,7 +59,7 @@ const Filter = ({ setOrden, setCurrentPage }) => {
         </div>
 
         <div className={Style.filterOneContainer}>
-          <label  htmlFor="puntuation-select">Puntuation</label>
+          <label className={Style.label}  htmlFor="puntuation-select">Puntuation</label>
           <select className={Style.select}  id="puntuation-select" onChange={(e) => handlePuntuation(e)}>
             <option value="all">All Puntuations</option>
             <option value="menormayor">From smallest to Largest</option>
@@ -68,7 +68,7 @@ const Filter = ({ setOrden, setCurrentPage }) => {
         </div>
 
         <div className={Style.filterOneContainer}>
-          <label htmlFor="filter-created-select">Creation</label>
+          <label className={Style.label} htmlFor="filter-created-select">Creation</label>
           <select className={Style.select}  id="filter-created-select" onChange={(e) => handleFilterCreated(e)}>
             <option value="All">All Recipes</option>
             <option value="created">Your Creations</option>

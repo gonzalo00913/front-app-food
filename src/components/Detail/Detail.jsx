@@ -42,7 +42,7 @@ import Style from "../Detail/detail.module.css"
     </div>
     <Link to="/home">
         <button type="button" className={Style.btnBack}>
-        🢀
+          Back
         </button>
       </Link>
     </div>

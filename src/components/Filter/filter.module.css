@@ -36,3 +36,101 @@
   width: 50%;
   margin: auto;
 }
+
+/* responsive */
+@media (max-width: 450px) {
+  .filterAllContainer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 120px;
+    width: 60%;
+  }
+  
+  .filter {
+    width: 100%;
+    margin: auto;
+    
+  }
+  .typeDiet {
+    font-size: 20px;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .filterOneContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 40px;
+    font-size: 19px;
+    color: #2e2d2d;
+    width: 100%;
+    text-align: center;
+  }
+  .select {
+    border-radius: 6px;
+    font-size: 13px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 2px;
+    width: 60%;
+    margin: auto;
+  }
+
+  .label{
+    font-size: 16px;
+    margin: 6px;
+  }
+}
+ 
+ 
+ @media screen and (min-width: 450px) and (max-width: 800px) {
+  .filterAllContainer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 120px;
+    width: 60%;
+  }
+  
+  .filter {
+    width: 100%;
+    margin: auto;
+    
+  }
+  .typeDiet {
+    font-size: 20px;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .filterOneContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 40px;
+    font-size: 19px;
+    color: #2e2d2d;
+    width: 100%;
+    text-align: center;
+  }
+  .select {
+    border-radius: 6px;
+    font-size: 13px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 2px;
+    width: 8cap;
+    margin: auto;
+  }
+
+  .label{
+    font-size: 19px;
+    margin: 9px;
+  }
+  
+ } 
+
