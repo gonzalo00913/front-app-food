@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+/* import { NavLink } from "react-router-dom"; */
 import { getTypeDiets, createRecipe } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import Style from "../Form/form.module.css";
+import Footer from "../Footer/Footer";
 
 function controlForm(input) {
   const reg = new RegExp("^[0-9]+$");
@@ -15,9 +16,12 @@ function controlForm(input) {
     !reg.test(input.healthScore)
   )
     errors.healthScore = "Please enter a health score between 0-100";
+  if (!input.steps || input.steps.length === 0) // Validación de lista de pasos vacía
+    errors.steps = "Please enter the steps of the recipe";
   if (!input.diets) errors.diets = "Please enter the typeDiets of the recipe";
   return errors;
 }
+
 
 export default function CreateRecipe() {
   const dispatch = useDispatch();
@@ -84,18 +88,18 @@ export default function CreateRecipe() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const recipeData = {
-      ...input,
-    };
-    dispatch(createRecipe(recipeData));
-
     if (
       input.name &&
       input.summary &&
       input.healthScore &&
-      input.steps &&
-      input.diets
+      listSteps.length > 0 &&
+      input.diets.length > 0
     ) {
+      const recipeData = {
+        ...input,
+        steps: listSteps.join("|"),
+      };
+      dispatch(createRecipe(recipeData));
       alert("Recipe created");
       setInput({
         name: "",
@@ -105,6 +109,7 @@ export default function CreateRecipe() {
         steps: "",
         diets: [],
       });
+      setListSteps([]); // Reinicia la lista de pasos después de crear la receta
     } else {
       alert("Please fill all the fields");
     }
@@ -114,15 +119,9 @@ export default function CreateRecipe() {
     setStepDescription(e.target.value);
   }
 
-  function handleStep(e) {
-    e.preventDefault();
-    if (stepDescription !== "") {
-      setListSteps([...listSteps, stepDescription]);
-      setStep(step + 1);
-      setStepDescription("");
-    } else {
-      alert("Please enter a step");
-    }
+  function handleChangeStep(e) {
+    setStepDescription(e.target.value);
+    setListSteps([...listSteps, e.target.value]);
   }
 
   function handleImageUpload(event) {
@@ -138,87 +137,78 @@ export default function CreateRecipe() {
   return (
     <div>
       <div className={Style.formContainer}>
-        <NavLink to="/home">
-          <button className={Style.btnBack}>Back</button>
-        </NavLink>
-      
         <form className={Style.form} onSubmit={(e) => handleSubmit(e)}>
+          <h4 className={Style.h4}>Create your Recipe</h4>
           <div>
-            <label className={Style.label}>Name:</label>
-            <input
-              className={Style.input}
-              type="text"
-              name="name"
-              value={input.name}
-              onChange={(e) => handleChange(e)}
-              onKeyPress={(e) => handleChange(e)}
-            />
-            {errors.name && <p className="input-error">{errors.name}</p>}
+            <div className={Style.nameSummary}>
+              <div>
+                <label className={Style.label}>Name:</label>
+                {errors.name && <p className={Style.error}>{errors.name}</p>}
+              </div>
+              <div>
+                <input
+                  className={Style.input}
+                  type="text"
+                  name="name"
+                  value={input.name}
+                  onChange={(e) => handleChange(e)}
+                  onKeyPress={(e) => handleChange(e)}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className={Style.label}>Summary:</label>
+              {errors.summary && (
+                <p className={Style.error}>{errors.summary}</p>
+              )}
+              <input
+                className={Style.input}
+                type="text"
+                name="summary"
+                value={input.summary}
+                onChange={(e) => handleChange(e)}
+              />
+            </div>
+          </div>
+
+          <div className={Style.scoreStep}>
+            <div>
+              <label className={Style.label}>HealthScore:</label>
+              {errors.healthScore && (
+                <p className={Style.error}>{errors.healthScore}</p>
+              )}
+              <input
+                className={Style.input}
+                type="number"
+                name="healthScore"
+                value={input.healthScore}
+                onChange={(e) => handleChange(e)}
+              />
+            </div>
+
+            <div>
+              <label className={Style.label}>Step by step:</label>
+              {errors.steps && <p className={Style.error}>{errors.steps}</p>}
+              <div>
+                <input
+                  className={Style.input}
+                  name="steps"
+                  value={stepDescription}
+                  onChange={handleChangeStep}
+                />
+              </div>
+            </div>
           </div>
 
           <div>
-            <label className={Style.label}>Summary:</label>
-            <input
-              className={Style.input}
-              type="text"
-              name="summary"
-              value={input.summary}
-              onChange={(e) => handleChange(e)}
-            />
-            {errors.summary && <p>{errors.summary}</p>}
-          </div>
-
-          <div>
-            <label className={Style.label}>Imagen:</label>
+            <label className={Style.labelImg}>Imagen:</label>
             <input
               className={Style.inputImage}
               type="file"
               onChange={handleImageUpload}
             />
           </div>
-
-          <div>
-            <label className={Style.label}>Image URL:</label>
-            <input
-              className={Style.input}
-              type="text"
-              name="image"
-              value={input.image}
-              onChange={(e) => handleChange(e)}
-            />
-            {input.image && (
-              <img className={Style.imageURL} src={input.image} alt="Recipe" />
-            )}
-          </div>
-
-          <div>
-            <label className={Style.label}>HealthScore:</label>
-            <input
-              className={Style.input}
-              type="number"
-              name="healthScore"
-              value={input.healthScore}
-              onChange={(e) => handleChange(e)}
-            />
-            {errors.healthScore && <p>{errors.healthScore}</p>}
-          </div>
-
-          <div>
-            <label className={Style.label}>Step by step:</label>
-            <div className={Style.containerTextBtn}>
-              <textarea
-                className={Style.textarea}
-                name="steps"
-                value={stepDescription}
-                onChange={handleChangeStep}
-              />
-              <button className={Style.btn} onClick={handleStep}>
-                Add
-              </button>
-            </div>
-          </div>
-
-          <div></div>
           <div>
             <label className={Style.labelDiets}>Select Diet:</label>
             <select onChange={(e) => handleSelect(e)}>
@@ -229,27 +219,38 @@ export default function CreateRecipe() {
                 </option>
               ))}
             </select>
-            <div>
-              {Array.from(input.diets).map((diet) => (
-                <div key={diet}>
-                  <button onClick={() => handleDelete(diet)}>X</button>
-                  <span>{diet}</span>
-                </div>
-              ))}
-            </div>
+            <div></div>
+            {Array.from(input.diets).map((diet) => (
+              <div key={diet}>
+                <button onClick={() => handleDelete(diet)}>X</button>
+                <span>{diet}</span>
+              </div>
+            ))}
           </div>
 
           {errors.hasOwnProperty("name") ||
           errors.hasOwnProperty("summmary") ||
           errors.hasOwnProperty("healthScore") ? (
-            <p>Please complete all the inputs to create your recipe</p>
+            <p className={Style.errorComplete}>
+              Please complete all the inputs to create your recipe
+            </p>
           ) : (
             <button className={Style.button} type="submit">
               Create Recipe
             </button>
           )}
         </form>
+        <div className={Style.imagen}>
+          <label className={Style.label}></label>
+          {input.image && (
+            <img className={Style.imageURL} src={input.image} alt="Recipe" />
+          )}
+        </div>
       </div>
+      <Footer />
     </div>
   );
+}
+
+{
 }

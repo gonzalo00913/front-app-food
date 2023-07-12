@@ -1,0 +1,35 @@
+.footer {
+  background-color: #c8d9eb;
+  height: 35px;
+  padding: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact {
+  margin-top: 10px;
+  color: rgb(54, 54, 54);
+}
+
+.l {
+  margin: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  color: rgb(23, 75, 189);
+}
+.g {
+  margin: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  color: rgb(35, 35, 35);
+}
+.t {
+  margin: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  color: rgb(23, 145, 189);
+}

@@ -5,6 +5,7 @@ import Card from "../Card/Card";
 import Paginado from "../Paginado/Paginado";
 import Style from "../Home/home.module.css";
 import Filter from "../Filter/Filter";
+import Footer from "../Footer/Footer";
 
 const Home = ({ recipes, getAllRecipes }) => {
   console.log("hola", recipes);
@@ -73,9 +74,13 @@ const Home = ({ recipes, getAllRecipes }) => {
               totalPages={totalPages}
               onPageChange={handlePageChange}
             />
+      
           </div>
+          
         )}
+              <Footer/>
       </div>
+
     </div>
   );
 };
