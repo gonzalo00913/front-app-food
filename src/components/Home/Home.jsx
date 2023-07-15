@@ -16,13 +16,10 @@ const Home = ({ recipes, getAllRecipes }) => {
 
   useEffect(() => {
     getAllRecipes();
-  }, [getAllRecipes]);
-
-  useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 500);
-  }, []);
+    }, 500); // Puedes ajustar el tiempo de espera según tus necesidades
+  }, [getAllRecipes]);
 
   // Lógica para obtener las recetas de la página actual
   const indexOfLastRecipe = currentPage * recipesPerPage;
@@ -49,7 +46,7 @@ const Home = ({ recipes, getAllRecipes }) => {
 
       <div>
         {isLoading ? (
-          <div className={Style.loader}>loading...</div>
+          <div className={Style.loader}></div>
         ) : (
           <div>
             <div className={Style.containerHomeColor}>
@@ -65,22 +62,25 @@ const Home = ({ recipes, getAllRecipes }) => {
                     <Card recipe={recipe} key={recipe.id} />
                   ))
                 ) : (
-                  <p>Recipe name not found!</p>
+                  <p>Recipe not found!</p>
                 )}
               </div>
+
+              {isLoading ? (
+                <div className={Style.loader}>loading...</div>
+              ) : (
+                <div>{/* Contenido normal */}</div>
+              )}
             </div>
             <Paginado
               currentPage={currentPage}
               totalPages={totalPages}
               onPageChange={handlePageChange}
             />
-      
           </div>
-          
         )}
-              <Footer/>
+        <Footer />
       </div>
-
     </div>
   );
 };

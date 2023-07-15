@@ -1,22 +1,21 @@
-.pagination{
-    text-align: center;
-    padding-bottom: 80px;
-    margin-top: 50px;
-
+.pagination {
+  text-align: center;
+  padding-bottom: 130px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.PaginadoBtn{
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 17px;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+.PaginadoBtn {
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 17px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
-.PaginadoBtnClic{
-    font-size: 18px;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
-    background-color: #1e6376;
-    color: white;
-}
-.hola{
-    background-color: red;
+.PaginadoBtnClic {
+  font-size: 18px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  background-color: #3b9f1d;
+  color: white;
 }

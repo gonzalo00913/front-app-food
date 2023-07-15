@@ -189,7 +189,7 @@ export default function CreateRecipe() {
 
             <div>
               <label className={Style.label}>Step by step:</label>
-              {errors.steps && <p className={Style.error}>{errors.steps}</p>}
+              {/* {errors.steps && <p className={Style.error}>{errors.steps}</p>} */}
               <div>
                 <input
                   className={Style.input}
@@ -226,6 +226,8 @@ export default function CreateRecipe() {
                 <span>{diet}</span>
               </div>
             ))}
+          
+
           </div>
 
           {errors.hasOwnProperty("name") ||

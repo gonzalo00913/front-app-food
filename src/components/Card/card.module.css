@@ -10,8 +10,8 @@
 .cardImage {
   border-radius: 2px;
   width: 340px;
-  border: 2px solid #047808;
-  
+  border: 2px solid #07700b;
+  margin: 20px;
 }
 
 .card {
@@ -29,16 +29,11 @@
   font-size: 20px;
   text-shadow: 2px 2px 5px rgb(0, 0, 0);
   border-radius: 5px;
+  width: 320px;
+  margin: auto;
 }
 
 .cardName:hover {
   color: #de5732;
 }
 
-.li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  color: #2e2d2d;
-}

@@ -16,11 +16,13 @@ const Card = ({ recipe, getRecipesById }) => {
         <img className={Style.cardImage} src={recipe.image} alt={recipe.name} />
         <Link to={`/detail/${recipe.id}`} onClick={handleRecipeClick}>
           <h2 className={Style.cardName}>{recipe.name}</h2>
-        </Link>
+        </Link >
+     {/*    <div className={Style.ul}>
         {recipe.Diets.map((diet) => (
-          <li className={Style.li}>{diet.name}</li>
+          <h5 className={Style.li}>{diet.name}</h5>
         ))}
-        <div></div>
+        </div> */}
+ 
       </div>
     </div>
   );
