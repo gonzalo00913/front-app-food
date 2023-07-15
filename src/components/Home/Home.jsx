@@ -20,6 +20,7 @@ const Home = ({ recipes, getAllRecipes }) => {
       setIsLoading(false); 
     });
   }, [getAllRecipes]);
+  
 
   // Lógica para obtener las recetas de la página actual
   const indexOfLastRecipe = currentPage * recipesPerPage;
