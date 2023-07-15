@@ -15,10 +15,10 @@ const Home = ({ recipes, getAllRecipes }) => {
   const recipesPerPage = 9;
 
   useEffect(() => {
-    getAllRecipes();
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 500); // Puedes ajustar el tiempo de espera según tus necesidades
+    setIsLoading(true); 
+    getAllRecipes().then(() => {
+      setIsLoading(false); 
+    });
   }, [getAllRecipes]);
 
   // Lógica para obtener las recetas de la página actual
