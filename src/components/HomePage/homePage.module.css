@@ -58,12 +58,7 @@
   margin-top: 80px;
 }
 
-.boton:hover {
-  animation-name: color;
-  animation-duration: 100ms;
-  animation-fill-mode: forwards;
-  color: #e85f1e;
-}
+
 
 .containerh1Parrafo {
   display: flex;
@@ -73,6 +68,57 @@
   margin-top: 80px;
 }
 
+.containerColorOne {
+  background-color: #ecf2f9;
+  width: 50%;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.boton {
+
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #116700;
+  color: #f7edc7;
+  box-shadow: 4px 4px 6px rgb(28, 28, 28);
+}
+
+.logoInicio {
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.logoInicio:hover {
+  transform: scale(1.1);
+}
+
+.boton:active {
+  transform: translateY(2px);
+}
+
+.containerBtnImg:hover .logoInicio {
+  transform: translateY(-5px);
+}
+
+.h1, .parrafo {
+  transition: text-align 0.5s ease;
+}
+
+.h1:hover, .parrafo:hover {
+  text-align: center;
+}
 /* responsive */
 @media (max-width: 450px) {
   .parrafo {
