@@ -4,12 +4,17 @@
   width: 50%;
   margin: auto;
   color: #282828;
-
+  background-color: #c8d9eb;
+  border-radius: 10px;
 }
 .h1{
-  margin-top: 80px;
+  margin-top: 50px;
   font-size: 40px;
   color: #282828;
+  padding: 15px;
+}
+.h2{
+  font-size: 30px;
 }
 
 .parrafo {
@@ -18,13 +23,14 @@
   margin: auto;
   text-align: left;
   text-shadow: 10px 7px 23px 3px rgba(0,0,0,0.75);
+  padding: 25px;
 }
 
 .containerImgParrafo{
   display: flex;
   justify-content: space-evenly;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .imgAbout{
@@ -37,5 +43,17 @@
 }
 
 .containerTechnologiesLogos{
-  margin-top: 250px;
+  margin-top: 240px;
+ 
+}
+
+.btn{
+background-color: #07700b;
+color: aliceblue;
+border: none;
+margin-top: 50px;
+margin-left: 1150px;
+font-size: 30px;
+padding: 3px;
+border-radius: 5px;
 }

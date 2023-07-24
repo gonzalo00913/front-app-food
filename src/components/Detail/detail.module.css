@@ -3,6 +3,11 @@
   text-align: center;
   width: 1600px;
   margin: auto;
+  background-color: #c8d9eb;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  border-radius: 5px;
+
 }
 
 .containerDetails {
@@ -15,10 +20,11 @@
   border: 2px solid #f7edc7;
 }
 .containerResume {
-  margin-top: 70px;
+  margin-top: 35px;
   margin-left: 30px;
   text-align: left;
   color: #2e2d2d;
+  padding: 6px;
 
 }
 .h2 {
@@ -26,8 +32,18 @@
   color: #2e2d2d ;
 
 }
-.btnBack {
-  font-size: 25px;
-  margin-top: 130px;
-  margin-left: 160px;
+.btn{
+  background-color: #07700b;
+  color: aliceblue;
+  border: none;
+  margin-top: 50px;
+  margin-left: 1550px;
+  font-size: 30px;
+  padding: 3px;
+  border-radius: 5px;
+  }
+
+.resume{
+color: rgb(0, 0, 0);
+font-size: 19px;
 }

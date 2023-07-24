@@ -28,9 +28,9 @@ import Style from "../Detail/detail.module.css"
    
        </div>
        <div className={Style.containerResume}>
-          <p>Summary: {data.summary}</p>
-          <p>Health Score: {data.healthScore}</p>
-          <p>Steps: {data.steps}</p>
+          <p className={Style.resume}>Summary: {data.summary}</p>
+          <p className={Style.resume}>Health Score: {data.healthScore}</p>
+          <p className={Style.resume}>Steps: {data.steps}</p>
           Type of diet:
           {
             data.Diets?.map((diet) => <span key={diet.id} >{diet.name}</span>)
@@ -41,7 +41,7 @@ import Style from "../Detail/detail.module.css"
       <div className={Style.parrafo}></div>
     </div>
     <Link to="/home">
-        <button type="button" className={Style.btnBack}>
+        <button type="button" className={Style.btn}>
           Back
         </button>
       </Link>

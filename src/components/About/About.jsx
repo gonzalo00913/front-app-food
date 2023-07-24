@@ -10,6 +10,7 @@ import img4 from "../Logos/sequelize.png";
 
 
 
+
 const About = () =>{
     return(
         <div className={Style.containerAbout}>
@@ -20,19 +21,19 @@ const About = () =>{
           You can see the details of each recipe, search for them by name, filter them and also create your own recipes.</p>
             </div>
             <div className={Style.containerTechnologiesLogos}>
-              <h2>technologies</h2>
+              <h2 className={Style.h2}>technologies</h2>
               <img className={Style.img} src={img} alt="logo" />
               <img className={Style.img} src={img1} alt="logo" />
               <img className={Style.img} src={img2} alt="logo" />
               <img className={Style.img} src={img3} alt="logo" />
               <img className={Style.img} src={img4} alt="logo" />
             </div>
-            <Link to="/home">
-        <button type="button" className="btn btn-secondary">
+        <Link to="/home">
+        <button type="button" className={Style.btn}>
           Back
         </button>
       </Link>
-     
+
         </div>
     )
 }
