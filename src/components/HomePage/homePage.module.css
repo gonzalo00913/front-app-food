@@ -95,9 +95,11 @@
   box-shadow: 4px 4px 6px rgb(28, 28, 28);
 }
 
+
 .logoInicio {
   width: 300px;
   transition: transform 0.3s ease;
+
 }
 
 .logoInicio:hover {
@@ -219,6 +221,8 @@
     margin-top: 50px;
   }
 }
+
+
 
 @media screen and (min-width: 750px) and (max-width: 1550px) {
   .parrafo {

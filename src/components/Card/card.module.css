@@ -1,39 +1,45 @@
 .card {
   width: 100%;
   text-align: center;
-  padding: 1px;
-  margin-top: 25px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #c8d9eb;
+  height: 390px;
+  width: 340px;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0);
 }
 .cardImage {
   border-radius: 2px;
-  width: 340px;
-  border: 2px solid #07700b;
+  width: 300px;
+  border: 2px solid #ffffff;
   margin: 20px;
 }
-
+.cardImage:hover{
+  border: 2px solid green;
+}
 .card {
-  position: relative; 
+  position: relative;
   margin: 8px;
+  margin-bottom: 25px;
 }
 
 .cardName {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 20px;
-  text-shadow: 2px 2px 5px rgb(0, 0, 0);
-  border-radius: 5px;
+  color: #282828;
+  font-size: 19px;
+  text-shadow: 2px 2px 5px rgb(225, 223, 223);
   width: 320px;
   margin: auto;
+  margin-bottom: 10px;
 }
 
-.cardName:hover {
-  color: #de5732;
+
+.span {
+  color: #282828;
+  width: 120px;
+
 }
 
+.link {
+  list-style: none;
+  text-decoration: none;
+}

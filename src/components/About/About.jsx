@@ -20,14 +20,14 @@ const About = () =>{
           <p className={Style.parrafo}>Food App is an application that allows you to discover and explore more than 100 recipes.
           You can see the details of each recipe, search for them by name, filter them and also create your own recipes.</p>
             </div>
-            <div className={Style.containerTechnologiesLogos}>
+          {/*   <div className={Style.containerTechnologiesLogos}>
               <h2 className={Style.h2}>technologies</h2>
               <img className={Style.img} src={img} alt="logo" />
               <img className={Style.img} src={img1} alt="logo" />
               <img className={Style.img} src={img2} alt="logo" />
               <img className={Style.img} src={img3} alt="logo" />
               <img className={Style.img} src={img4} alt="logo" />
-            </div>
+            </div> */}
         <Link to="/home">
         <button type="button" className={Style.btn}>
           Back

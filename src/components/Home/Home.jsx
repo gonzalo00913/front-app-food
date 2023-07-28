@@ -7,6 +7,7 @@ import Style from "../Home/home.module.css";
 import Filter from "../Filter/Filter";
 import Footer from "../Footer/Footer";
 
+
 const Home = ({ recipes, getAllRecipes }) => {
   console.log("hola", recipes);
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,12 +23,12 @@ const Home = ({ recipes, getAllRecipes }) => {
   }, [getAllRecipes]);
   
 
-  // Lógica para obtener las recetas de la página actual
+
   const indexOfLastRecipe = currentPage * recipesPerPage;
   const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
 
   useEffect(() => {
-    setCurrentPage(1); // Reiniciar la página a la primera cuando se actualiza el estado recipes
+    setCurrentPage(1); 
   }, [recipes]);
 
   const currentRecipes = Array.isArray(recipes)
@@ -36,14 +37,13 @@ const Home = ({ recipes, getAllRecipes }) => {
 
   const totalPages = Math.ceil(recipes.length / recipesPerPage);
 
-  // Función para cambiar de página
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
   return (
     <div>
-      {/* <h1 className={Style.recipes}>Food recipes</h1> */}
+   {/*    <h1 className={Style.recipes}>Food recipes</h1> */}
 
       <div>
         {isLoading ? (
@@ -70,7 +70,7 @@ const Home = ({ recipes, getAllRecipes }) => {
               {isLoading ? (
                 <div className={Style.loader}>loading...</div>
               ) : (
-                <div>{/* Contenido normal */}</div>
+                <div>{}</div>
               )}
             </div>
             <Paginado

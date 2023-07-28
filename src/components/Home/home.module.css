@@ -6,7 +6,17 @@
     flex-wrap: wrap;
     width: 70%;
     margin: auto;
-    
+    animation: fade-in 1s ease-in;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes animate8345 {
@@ -25,7 +35,7 @@
     align-items: center;
     height: 200px;
     margin-top: 300px;
-    animation: spin 1s linear infinite;
+    animation: spin 2s linear infinite;
   }
   
   @keyframes spin {

@@ -4,6 +4,18 @@
   margin: auto;
   margin-top: 130px;
   width: 60%;
+  animation: fade-in 1s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .filter {
@@ -46,11 +58,10 @@
     margin-top: 120px;
     width: 60%;
   }
-  
+
   .filter {
     width: 100%;
     margin: auto;
-    
   }
   .typeDiet {
     font-size: 20px;
@@ -58,7 +69,7 @@
     width: 100%;
     margin: auto;
   }
-  
+
   .filterOneContainer {
     display: flex;
     flex-direction: column;
@@ -79,14 +90,13 @@
     margin: auto;
   }
 
-  .label{
+  .label {
     font-size: 16px;
     margin: 6px;
   }
 }
- 
- 
- @media screen and (min-width: 450px) and (max-width: 800px) {
+
+@media screen and (min-width: 450px) and (max-width: 800px) {
   .filterAllContainer {
     display: flex;
     justify-content: center;
@@ -94,11 +104,10 @@
     margin-top: 120px;
     width: 60%;
   }
-  
+
   .filter {
     width: 100%;
     margin: auto;
-    
   }
   .typeDiet {
     font-size: 20px;
@@ -106,7 +115,7 @@
     width: 100%;
     margin: auto;
   }
-  
+
   .filterOneContainer {
     display: flex;
     flex-direction: column;
@@ -127,10 +136,8 @@
     margin: auto;
   }
 
-  .label{
+  .label {
     font-size: 19px;
     margin: 9px;
   }
-  
- } 
-
+}
