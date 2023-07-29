@@ -8,7 +8,11 @@ const HomePage = () => {
     <div className={Style.containerColor}>
       <div className={Style.containerColorOne}>
         <div className={Style.containerh1Parrafo}>
-          <h1 className={Style.h1}>¡Homemade Delights!</h1>
+       {/*    <h1 className={Style.h1}>¡Homemade Delights!</h1> */}
+          <div className={Style.title2}> 
+            <span className={Style.HomemadeColor}>¡Homemade</span>
+            <span className={Style.DelightsColor}>Delights!</span>
+          </div>
           <p className={Style.parrafo}>
             Discover a wide variety of <strong className={Style.strong}>"delicious recipes"</strong> that
             will inspire you to create dishes. In addition, you will be able to

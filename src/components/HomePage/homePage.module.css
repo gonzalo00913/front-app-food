@@ -7,19 +7,18 @@
   line-height: 1.5;
   padding: 10px;
   border-radius: 5px;
-  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
-.strong{
+.strong {
   color: #008c07;
 }
 
-.h1 {
+/* .h1 {
   color: #2e2d2d;
   text-align: center;
   font-size: 46px;
 
 }
-
+ */
 .containerColor {
   display: flex;
   height: 100vh;
@@ -63,8 +62,6 @@
   margin-top: 80px;
 }
 
-
-
 .containerh1Parrafo {
   display: flex;
   flex-direction: column;
@@ -90,7 +87,6 @@
 }
 
 .boton {
-
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -100,11 +96,9 @@
   box-shadow: 4px 4px 6px rgb(28, 28, 28);
 }
 
-
 .logoInicio {
   width: 300px;
   transition: transform 0.3s ease;
-
 }
 
 .logoInicio:hover {
@@ -119,15 +113,33 @@
   transform: translateY(-5px);
 }
 
-.h1, .parrafo {
+.h1,
+.parrafo {
   transition: text-align 0.5s ease;
-
-
 }
 
-.h1:hover, .parrafo:hover {
+.h1:hover,
+.parrafo:hover {
   text-align: center;
-  
+}
+
+.title2 {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 40px;
+  margin-bottom: 80px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+}
+.HomemadeColor {
+  color: #008c07;
+  margin-right: 10px;
+
+}
+.DelightsColor {
+  color: #dc830e;
 }
 /* responsive */
 @media (max-width: 450px) {
@@ -230,8 +242,6 @@
   }
 }
 
-
-
 @media screen and (min-width: 750px) and (max-width: 1550px) {
   .parrafo {
     width: 90%;
@@ -282,4 +292,3 @@
     margin-top: 80px;
   }
 }
-

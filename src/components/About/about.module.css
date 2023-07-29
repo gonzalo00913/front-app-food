@@ -1,10 +1,5 @@
 .containerAbout {
-  margin-top: 200px;
-  text-align: center;
-  width: 50%;
-  margin: auto;
   color: #282828;
-  border-radius: 10px;
   animation: fade-in 1s ease-in;
 }
 
@@ -19,53 +14,67 @@
   }
 }
 
-.h1{
-  margin-top: 50px;
+.h1TypingAnimation {
   font-size: 40px;
   color: #282828;
-  padding: 15px;
+  padding: 30px;
+  text-align: center;
 }
-.h2{
+.h2 {
   font-size: 30px;
+}
+.flexTitleImage {
+  display: flex;
+  justify-content: center;
 }
 
 .parrafo {
   font-size: 25px;
-  width: 800px;
+  width: 600px;
   margin: auto;
-  text-align: left;
-  text-shadow: 10px 7px 23px 3px rgba(0,0,0,0.75);
+  text-align: center;
+  text-shadow: 10px 7px 23px 3px rgba(0, 0, 0, 0.75);
   padding: 25px;
 }
 
-.containerImgParrafo{
-  display: flex;
-  justify-content: space-evenly;
-  justify-content: center;
-  margin-top: 50px;
-}
 
-.imgAbout{
-  width: 200px;
-  
-}
 
-.img{
+.imgAbout {
   width: 100px;
+  height: 100px;
+  margin-top: 30px;
 }
 
-.containerTechnologiesLogos{
-  margin-top: 240px;
- 
+.img {
+  width: 60px;
 }
 
-.btn{
-background-color: #07700b;
-color: aliceblue;
-border: none;
-margin-top: 50px;
-margin-left: 1150px;
-font-size: 30px;
-padding: 3px;
-border-radius: 5px;
+.containerTechnologiesLogos {
+
+text-align: center;
+}
+.sectionLogos{
+  background-color: red;
+  margin: auto;
+}
+.sectionParrafo{
+  background-color: red;
+  margin: auto;
+}
+.btn {
+  background-color: #07700b;
+  color: aliceblue;
+  border: none;
+  margin-top: 50px;
+  margin-left: 1150px;
+  font-size: 30px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.articleOne{
+  display: flex;
+  
+  justify-content: space-between;
+  margin-top: 100px;
 }
