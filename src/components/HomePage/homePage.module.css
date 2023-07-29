@@ -7,12 +7,17 @@
   line-height: 1.5;
   padding: 10px;
   border-radius: 5px;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.strong{
+  color: #008c07;
 }
 
 .h1 {
   color: #2e2d2d;
   text-align: center;
   font-size: 46px;
+
 }
 
 .containerColor {
@@ -91,7 +96,7 @@
 
 .boton:hover {
   background-color: #116700;
-  color: #f7edc7;
+  color: #dc830e;
   box-shadow: 4px 4px 6px rgb(28, 28, 28);
 }
 
@@ -116,10 +121,13 @@
 
 .h1, .parrafo {
   transition: text-align 0.5s ease;
+
+
 }
 
 .h1:hover, .parrafo:hover {
   text-align: center;
+  
 }
 /* responsive */
 @media (max-width: 450px) {

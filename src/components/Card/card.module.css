@@ -14,19 +14,32 @@
   border: 2px solid #ffffff;
   margin: 20px;
 }
+/* @keyframes flipAnimation {
+
+  0% {
+    transform: perspective(800px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(800px) rotateY(360deg);
+  }
+} */
+
 .cardImage:hover{
   border: 2px solid green;
+ /*  animation: flipAnimation 2.5s ease ; */
 }
 .card {
   position: relative;
   margin: 8px;
   margin-bottom: 25px;
+
 }
+
 
 .cardName {
   color: #282828;
   font-size: 19px;
-  text-shadow: 2px 2px 5px rgb(225, 223, 223);
+  
   width: 320px;
   margin: auto;
   margin-bottom: 10px;

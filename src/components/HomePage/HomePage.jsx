@@ -8,12 +8,12 @@ const HomePage = () => {
     <div className={Style.containerColor}>
       <div className={Style.containerColorOne}>
         <div className={Style.containerh1Parrafo}>
-          <h1 className={Style.h1}>My Food App</h1>
+          <h1 className={Style.h1}>¡Homemade Delights!</h1>
           <p className={Style.parrafo}>
-            Discover a wide variety of delicious recipes that will inspire you
-            to create dishes. In addition, you will be able to explore valuable
-            culinary tips and tricks that will help you hone your gastronomic
-            skills.
+            Discover a wide variety of <strong className={Style.strong}>"delicious recipes"</strong> that
+            will inspire you to create dishes. In addition, you will be able to
+            explore <strong className={Style.strong}>"valuable culinary tips and tricks"</strong> that will
+            help you hone your gastronomic skills.
           </p>
         </div>
 
