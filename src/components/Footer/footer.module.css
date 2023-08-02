@@ -11,25 +11,31 @@
 }
 
 .contact {
-  margin-top: 10px;
+
   color: rgb(54, 54, 54);
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.info{
+  margin: 10px;
 }
 
 .l {
-  margin: 15px;
+  margin: 10px;
+  font-size: 20px;
   text-decoration: none;
-  font-size: 17px;
   color: rgb(23, 75, 189);
 }
 .g {
-  margin: 15px;
+  margin: 10px;
+  font-size: 20px;
   text-decoration: none;
-  font-size: 17px;
   color: rgb(35, 35, 35);
 }
 .t {
-  margin: 15px;
+  margin: 10px;
+  font-size: 20px;
   text-decoration: none;
-  font-size: 17px;
   color: rgb(23, 145, 189);
 }

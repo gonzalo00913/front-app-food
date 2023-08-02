@@ -13,7 +13,7 @@ const Nav = () => {
         <div className={Style.containerNavSearch}>
           <div className={Style.containerLinks}>
             <div>
-            <Link className={Style.link} to="/About">
+            <Link className={Style.link} /* to="/About" */ onClick={() =>{alert("In progress")}}>
               <i class="fa-solid fa-address-card"></i>
               <span className={Style.nombreIcono}>About</span>
             </Link>
