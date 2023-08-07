@@ -40,8 +40,6 @@ const Home = ({ recipes, getAllRecipes }) => {
 
   return (
     <div>
-      {/*    <h1 className={Style.recipes}>Food recipes</h1> */}
-
       <div>
         {isLoading ? (
           <div className={Style.loader}></div>
@@ -91,6 +89,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { getAllRecipes })(Home);
-
-// mapStateToProps Me permite acceder al estado global
-// mapDispatchToProps Me permite despachar acciones
