@@ -18,18 +18,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
- 
 }
 
-.link:hover{
+.link:hover {
   color: #008c07;
-
 }
 
 .nombreIcono {
   font-size: 20px;
   margin-left: 5px;
-  
 }
 
 .containerLinks {
@@ -78,13 +75,13 @@
   }
 
   .nombreIcono {
-   display: none;
+    display: none;
   }
 
   .containerLinks {
     display: flex;
     justify-content: space-evenly;
-}
+  }
 
   .searchBar {
     margin-top: 10px;
@@ -94,18 +91,15 @@
   .containerNavSearch {
     display: flex;
     flex-direction: column;
-
- 
   }
 
   .ban {
     display: none;
   }
 }
- 
- 
- @media screen and (min-width: 455px) and (max-width: 725px) {
-    .nav {
+
+@media screen and (min-width: 455px) and (max-width: 725px) {
+  .nav {
     background-color: #c8d9eb;
     height: 65px;
     padding: 12px;
@@ -124,13 +118,13 @@
   }
 
   .nombreIcono {
-   display: none;
+    display: none;
   }
 
   .containerLinks {
     display: flex;
     justify-content: space-evenly;
-}
+  }
 
   .searchBar {
     margin-top: 23px;
@@ -144,8 +138,7 @@
   .ban {
     display: none;
   }
-  
- } 
+}
 
 @media screen and (min-width: 725px) and (max-width: 950px) {
   .nav {
@@ -174,7 +167,7 @@
   .containerLinks {
     display: flex;
     justify-content: space-evenly;
-}
+  }
 
   .searchBar {
     margin-top: 22px;
@@ -188,10 +181,9 @@
   .ban {
     display: none;
   }
- 
- } 
+}
 
- @media screen and (min-width: 950px) and (max-width:1600px) {
+@media screen and (min-width: 950px) and (max-width: 1600px) {
   .nav {
     background-color: #c8d9eb;
     height: 65px;
@@ -218,7 +210,7 @@
   .containerLinks {
     display: flex;
     justify-content: space-evenly;
-}
+  }
 
   .searchBar {
     margin-top: 22px;
@@ -230,7 +222,6 @@
   }
 
   .ban {
-display: none;
+    display: none;
   }
- 
- } 
+}

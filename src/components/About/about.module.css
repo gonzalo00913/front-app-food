@@ -37,8 +37,6 @@
   padding: 25px;
 }
 
-
-
 .imgAbout {
   width: 100px;
   height: 100px;
@@ -50,14 +48,13 @@
 }
 
 .containerTechnologiesLogos {
-
-text-align: center;
+  text-align: center;
 }
-.sectionLogos{
+.sectionLogos {
   background-color: red;
   margin: auto;
 }
-.sectionParrafo{
+.sectionParrafo {
   background-color: red;
   margin: auto;
 }
@@ -72,9 +69,23 @@ text-align: center;
   border-radius: 5px;
 }
 
-.articleOne{
+.articleOne {
   display: flex;
-  
+
   justify-content: space-between;
   margin-top: 100px;
+}
+
+.color {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2c3e50;
+  z-index: 0;
+  transform: skewY(-4deg);
+  transform-origin: top left;
 }

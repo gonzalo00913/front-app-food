@@ -1,24 +1,23 @@
 .formContainer {
   text-align: center;
-  background-color: #ecf2f9;
+
   min-height: 100vh;
   padding: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  
 }
 
 .form {
   background-color: #c8d9eb;
   text-align: center;
-  width:36%;
+  width: 36%;
   border-radius: 4px;
   padding: 36px;
   height: 520px;
-
+  border: 2px solid #3e3d3d;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
-.imgDiet{
+.imgDiet {
   display: flex;
   margin-right: 110px;
   align-items: center;
@@ -31,13 +30,10 @@
   margin-top: 10px;
   font-size: 16px;
   color: #2e2d2d;
-
 }
-.flexbox{
+.flexbox {
   display: flex;
-
 }
-
 
 .input {
   border: none;
@@ -45,11 +41,8 @@
   outline: none;
   width: 80%;
 
-  margin-left:10px ;
+  margin-left: 10px;
   background-color: #c8d9eb;
-  
-
-
 }
 
 .inputImage {
@@ -61,21 +54,17 @@
   background-color: #3b3a3a49;
   color: #f7edc7;
   border-radius: 5px;
-  
 }
 
 .imageURL {
   width: 600px;
   height: 575px;
-  margin-bottom:6px;
-  border: 7px solid  #c8d9eb; 
+  margin-bottom: 6px;
+  border: 7px solid #c8d9eb;
 }
-.error{
-color:red;
-font-size: 10px;
-text-align: right;
-margin-right: 56px;
-
+.error {
+  color: red;
+  font-size: 10px;
 }
 
 .button {
@@ -88,8 +77,6 @@ margin-right: 56px;
   background-color: #34aa22;
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
-
-
 
 .containerTextBtn {
   display: flex;
@@ -107,17 +94,30 @@ margin-right: 56px;
 .btnBack {
   float: left;
   margin-bottom: 820px;
- 
-  font-size: 25px;
 
+  font-size: 25px;
 }
-.h4{
-  
-  text-align: left;
+.h4 {
+  margin-top: 150px;
+
+  text-align: center;
+  margin-left: 50px;
   font-size: 25px;
   color: #2e2d2d;
+  padding: 20px;
+}
+.create {
+  color: #2e2d2d;
+  margin-right: 10px;
+
+  font-size: 30px;
 }
 
+.recipe {
+  color: #2e2d2d;
+
+  font-size: 30px;
+}
 
 /* responsive*/
 

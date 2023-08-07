@@ -24,32 +24,28 @@
   }
 } */
 
-.cardImage:hover{
+.cardImage:hover {
   border: 2px solid green;
- /*  animation: flipAnimation 2.5s ease ; */
+  /*  animation: flipAnimation 2.5s ease ; */
 }
 .card {
   position: relative;
   margin: 8px;
-  margin-bottom: 25px;
-
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
-
 
 .cardName {
   color: #282828;
   font-size: 19px;
-  
   width: 320px;
   margin: auto;
   margin-bottom: 10px;
 }
 
-
 .span {
   color: #282828;
   width: 120px;
-
 }
 
 .link {

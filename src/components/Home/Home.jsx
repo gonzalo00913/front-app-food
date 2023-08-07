@@ -7,7 +7,6 @@ import Style from "../Home/home.module.css";
 import Filter from "../Filter/Filter";
 import Footer from "../Footer/Footer";
 
-
 const Home = ({ recipes, getAllRecipes }) => {
   console.log("hola", recipes);
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,19 +15,17 @@ const Home = ({ recipes, getAllRecipes }) => {
   const recipesPerPage = 9;
 
   useEffect(() => {
-    setIsLoading(true); 
+    setIsLoading(true);
     getAllRecipes().then(() => {
-      setIsLoading(false); 
+      setIsLoading(false);
     });
   }, [getAllRecipes]);
-  
-
 
   const indexOfLastRecipe = currentPage * recipesPerPage;
   const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
 
   useEffect(() => {
-    setCurrentPage(1); 
+    setCurrentPage(1);
   }, [recipes]);
 
   const currentRecipes = Array.isArray(recipes)
@@ -43,7 +40,7 @@ const Home = ({ recipes, getAllRecipes }) => {
 
   return (
     <div>
-   {/*    <h1 className={Style.recipes}>Food recipes</h1> */}
+      {/*    <h1 className={Style.recipes}>Food recipes</h1> */}
 
       <div>
         {isLoading ? (
@@ -80,6 +77,7 @@ const Home = ({ recipes, getAllRecipes }) => {
             />
           </div>
         )}
+
         <Footer />
       </div>
     </div>

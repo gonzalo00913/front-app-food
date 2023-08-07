@@ -2,9 +2,13 @@
   display: flex;
   justify-content: center;
   margin: auto;
-  margin-top: 130px;
-  width: 60%;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  width: 80%;
   animation: fade-in 1s ease-in;
+  background-color: #c8d9eb;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px black;
 }
 
 @keyframes fade-in {
@@ -33,7 +37,8 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   font-size: 25px;
   color: #2e2d2d;
   width: 100%;

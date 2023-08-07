@@ -13,18 +13,23 @@ const Card = ({ recipe, getRecipesById }) => {
   return (
     <div className={Style.containerCardAll}>
       <div className={Style.card}>
-        
-
-        <Link className={Style.link} to={`/detail/${recipe.id}`} onClick={handleRecipeClick}>
-        <img className={Style.cardImage} src={recipe.image} alt={recipe.name} />
-        </Link >
+        <Link
+          className={Style.link}
+          to={`/detail/${recipe.id}`}
+          onClick={handleRecipeClick}
+        >
+          <img
+            className={Style.cardImage}
+            src={recipe.image}
+            alt={recipe.name}
+          />
+        </Link>
         <h2 className={Style.cardName}>{recipe.name}</h2>
         <div className={Style.ul}>
-        {recipe.Diets.map((diet) => (
-          <span className={Style.span}>{diet.name}</span>
-        ))}
+          {recipe.Diets.map((diet) => (
+            <span className={Style.span}>{diet.name}</span>
+          ))}
         </div>
- 
       </div>
     </div>
   );

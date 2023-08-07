@@ -16,12 +16,12 @@ function controlForm(input) {
     !reg.test(input.healthScore)
   )
     errors.healthScore = "Please enter a health score between 0-100";
-  if (!input.steps || input.steps.length === 0) // Validación de lista de pasos vacía
+  if (!input.steps || input.steps.length === 0)
+    // Validación de lista de pasos vacía
     errors.steps = "Please enter the steps of the recipe";
   if (!input.diets) errors.diets = "Please enter the typeDiets of the recipe";
   return errors;
 }
-
 
 export default function CreateRecipe() {
   const dispatch = useDispatch();
@@ -109,7 +109,7 @@ export default function CreateRecipe() {
         steps: "",
         diets: [],
       });
-      setListSteps([]); // Reinicia la lista de pasos después de crear la receta
+      setListSteps([]);
     } else {
       alert("Please fill all the fields");
     }
@@ -136,14 +136,17 @@ export default function CreateRecipe() {
 
   return (
     <div>
+      <div className={Style.h4}>
+        <span className={Style.create}>Create</span>
+        <span className={Style.recipe}>your recipe</span>
+      </div>
+
       <div className={Style.formContainer}>
         <form className={Style.form} onSubmit={(e) => handleSubmit(e)}>
-          <h4 className={Style.h4}>Create your Recipe</h4>
           <div>
             <div className={Style.nameSummary}>
               <div>
                 <label className={Style.label}>Name:</label>
-                {errors.name && <p className={Style.error}>{errors.name}</p>}
               </div>
               <div>
                 <input
@@ -159,9 +162,7 @@ export default function CreateRecipe() {
 
             <div>
               <label className={Style.label}>Summary:</label>
-              {errors.summary && (
-                <p className={Style.error}>{errors.summary}</p>
-              )}
+
               <input
                 className={Style.input}
                 type="text"
@@ -175,9 +176,7 @@ export default function CreateRecipe() {
           <div className={Style.scoreStep}>
             <div>
               <label className={Style.label}>HealthScore:</label>
-              {errors.healthScore && (
-                <p className={Style.error}>{errors.healthScore}</p>
-              )}
+
               <input
                 className={Style.input}
                 type="number"
@@ -189,7 +188,7 @@ export default function CreateRecipe() {
 
             <div>
               <label className={Style.label}>Step by step:</label>
-              {/* {errors.steps && <p className={Style.error}>{errors.steps}</p>} */}
+
               <div>
                 <input
                   className={Style.input}
@@ -226,8 +225,6 @@ export default function CreateRecipe() {
                 <span>{diet}</span>
               </div>
             ))}
-          
-
           </div>
 
           {errors.hasOwnProperty("name") ||
@@ -241,7 +238,14 @@ export default function CreateRecipe() {
               Create Recipe
             </button>
           )}
+          {errors.name && <p className={Style.error}>{errors.name}</p>}
+          {errors.summary && <p className={Style.error}>{errors.summary}</p>}
+          {errors.healthScore && (
+            <p className={Style.error}>{errors.healthScore}</p>
+          )}
+          {/*{errors.steps && <p className={Style.error}>{errors.steps}</p>} */}
         </form>
+
         <div className={Style.imagen}>
           <label className={Style.label}></label>
           {input.image && (

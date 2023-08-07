@@ -25,21 +25,22 @@ const SearchBar = () => {
   return (
     <div className={Style.containerBtnSearchBar}>
       <div>
-      <input className={Style.searchBar}
-        placeholder="Search recipe..."
-        value={name}
-        onChange={handleInputChange}
-        onKeyDown={handleKeyDown}
-      />
-   </div>
+        <input
+          className={Style.searchBar}
+          placeholder="Search recipe..."
+          value={name}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
+        />
+      </div>
       <div>
-      <button
-        className={Style.buttom}
-        type="submit"
-        onClick={(event) => handleSubmit(event)}
-      >
-        Search
-      </button>
+        <button
+          className={Style.buttom}
+          type="submit"
+          onClick={(event) => handleSubmit(event)}
+        >
+          Search
+        </button>
       </div>
     </div>
   );

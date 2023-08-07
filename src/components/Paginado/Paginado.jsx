@@ -73,4 +73,3 @@ const Paginado = ({ currentPage, totalPages, onPageChange }) => {
 };
 
 export default Paginado;
-
