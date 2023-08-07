@@ -8,7 +8,6 @@ import Filter from "../Filter/Filter";
 import Footer from "../Footer/Footer";
 
 const Home = ({ recipes, getAllRecipes }) => {
-  console.log("hola", recipes);
   const [currentPage, setCurrentPage] = useState(1);
   const [orden, setOrden] = useState("");
   const [isLoading, setIsLoading] = useState(true);
