@@ -1,9 +1,25 @@
 import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import Style from "../Nav/nav.module.css";
-import imgLogo from "../img/food-icon.png";
+import imgLogo from "../img/food-icon.jpeg";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Nav = () => {
+
+  const message = () =>{
+    toast.error('In progress!', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
   return (
     <div>
       <div className={Style.nav}>
@@ -15,24 +31,22 @@ const Nav = () => {
             <div>
               <Link
                 className={Style.link}
-                /* to="/About" */ onClick={() => {
-                  alert("In progress");
-                }}
+                /* to="/About" */ onClick={message}
               >
-                <i class="fa-solid fa-address-card"></i>
-                <span className={Style.nombreIcono}>About</span>
+            {/*     <i class="fa-solid fa-address-card"></i> */}
+                <span className={Style.nombreIcono}>ABOUT</span>
               </Link>
             </div>
             <div className={Style.flexIcono}>
-              <Link className={Style.link} to="/Home">
-                <i class="fa-solid fa-utensils"></i>
-                <span className={Style.nombreIcono}>Recipes</span>
+              <Link className={Style.link} to="/">
+                {/* <i class="fa-solid fa-utensils"></i> */}
+                <span className={Style.nombreIcono}>RECIPES</span>
               </Link>
             </div>
             <div>
-              <Link className={Style.link} to="/Form">
-                <i class="fa-solid fa-kitchen-set"></i>
-                <span className={Style.nombreIcono}>Create</span>
+              <Link className={Style.link} /* to="/Form" */ onClick={message}>
+              {/*   <i class="fa-solid fa-kitchen-set"></i> */}
+                <span className={Style.nombreIcono}>CREATE</span>
               </Link>
             </div>
           </div>
@@ -40,7 +54,10 @@ const Nav = () => {
             <SearchBar />
           </div>
         </div>
+
+        <ToastContainer/>
       </div>
+     
     </div>
   );
 };

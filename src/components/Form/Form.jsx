@@ -4,22 +4,23 @@ import { getTypeDiets, createRecipe } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import Style from "../Form/form.module.css";
 import Footer from "../Footer/Footer";
+import imgForm from "../img/imgForm.png";
 
 function controlForm(input) {
   const reg = new RegExp("^[0-9]+$");
   let errors = {};
-  if (!input.name) errors.name = "Please enter the name of the recipe";
-  if (!input.summary) errors.summary = "Please enter the summary of the recipe";
+  if (!input.name) errors.name = "*Please enter the name of the recipe";
+  if (!input.summary) errors.summary = "*Please enter the summary of the recipe";
   if (
     input.healthScore < 0 ||
     input.healthScore > 100 ||
     !reg.test(input.healthScore)
   )
-    errors.healthScore = "Please enter a health score between 0-100";
+    errors.healthScore = "*Please enter a health score between 0-100";
   if (!input.steps || input.steps.length === 0)
     // Validación de lista de pasos vacía
-    errors.steps = "Please enter the steps of the recipe";
-  if (!input.diets) errors.diets = "Please enter the typeDiets of the recipe";
+    errors.steps = "*Please enter the steps of the recipe";
+  if (!input.diets) errors.diets = "*Please enter the typeDiets of the recipe";
   return errors;
 }
 
@@ -136,81 +137,75 @@ export default function CreateRecipe() {
 
   return (
     <div>
-      <div className={Style.h4}>
-        <span className={Style.create}>Create</span>
-        <span className={Style.recipe}>your recipe</span>
+        <h2 className={Style.h2form}>Create your recipe</h2>
+      <div  className={Style.flexAllContainer}>
+      <div className={Style.leftFormContainer}>
+      <img className={Style.imgForm} src={imgForm} alt="logo" />
       </div>
+      <div className={Style.containerAllForm}>
+        <form onSubmit={(e) => handleSubmit(e)}>
 
-      <div className={Style.formContainer}>
-        <form className={Style.form} onSubmit={(e) => handleSubmit(e)}>
-          <div>
-            <div className={Style.nameSummary}>
-              <div>
-                <label className={Style.label}>Name:</label>
+          <div className={Style.containerFormNameSummaryHealthScore}>
+            <div >
+            <div className={Style.flexInputText}>
+              <div >
+                <label className={Style.sizeTextForm} >Name</label>
               </div>
-              <div>
-                <input
-                  className={Style.input}
-                  type="text"
-                  name="name"
-                  value={input.name}
-                  onChange={(e) => handleChange(e)}
-                  onKeyPress={(e) => handleChange(e)}
+              <div className={Style.InputErrorMessage}>
+            
+                <input className={Style.sizeInputText} type="text" name="name" value={input.name} onChange={(e) => handleChange(e)} onKeyPress={(e) => handleChange(e)}
                 />
+            
+                {errors.name && <p className={Style.error}>{errors.name}</p>}
               </div>
             </div>
 
-            <div>
-              <label className={Style.label}>Summary:</label>
-
-              <input
-                className={Style.input}
-                type="text"
-                name="summary"
-                value={input.summary}
-                onChange={(e) => handleChange(e)}
-              />
+            <div className={Style.flexInputText}>
+              <label className={Style.sizeTextForm}>Summary</label>
+              </div>
+              <div className={Style.InputErrorMessage}>
+              <div >
+              <input className={Style.sizeInputText} type="text" name="summary" value={input.summary} onChange={(e) => handleChange(e)}/>
+            </div>
+            {errors.summary && <p className={Style.error}>{errors.summary}</p>}
             </div>
           </div>
 
-          <div className={Style.scoreStep}>
-            <div>
-              <label className={Style.label}>HealthScore:</label>
-
-              <input
-                className={Style.input}
-                type="number"
-                name="healthScore"
-                value={input.healthScore}
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-
-            <div>
-              <label className={Style.label}>Step by step:</label>
-
+          <div>
+            <div className={Style.flexInputText}>
+              <label className={Style.sizeTextForm}>HealthScore</label>
               <div>
-                <input
-                  className={Style.input}
-                  name="steps"
-                  value={stepDescription}
-                  onChange={handleChangeStep}
-                />
+              <div className={Style.InputErrorMessage}>
+               <input className={Style.sizeInputText} type="number" name="healthScore" value={input.healthScore} onChange={(e) => handleChange(e)}/>
+                {errors.healthScore && (<p className={Style.error}>{errors.healthScore}</p>)}
+              </div>
+              </div>
+            </div>
+
+            
+
+            <div className={Style.flexInputText}>
+              <label className={Style.sizeTextForm}>Step by step</label>
+            <div>
+                <textarea className={Style.sizeInputTextStep} name="steps" value={stepDescription} onChange={handleChangeStep}/>
               </div>
             </div>
           </div>
 
           <div>
-            <label className={Style.labelImg}>Imagen:</label>
-            <input
-              className={Style.inputImage}
-              type="file"
-              onChange={handleImageUpload}
-            />
+            <label className={Style.sizeTextForm}>Imagen</label>
+            <input className={Style.sizeInputBtnImg} type="file" onChange={handleImageUpload}/>
+            <div className={Style.imagen}>
+          <label className={Style.label}></label>
+          {input.image && (
+            <img className={Style.imageURL} src={input.image} alt="Recipe" />
+          )}
+        </div>
           </div>
+          
           <div>
-            <label className={Style.labelDiets}>Select Diet:</label>
-            <select onChange={(e) => handleSelect(e)}>
+            <label className={Style.sizeTextForm} >Select Diet</label>
+            <select className={Style.select}  onChange={(e) => handleSelect(e)}>
               <option value="">Select a diet</option>
               {listDiets.map((t) => (
                 <option key={t.name} value={t.name}>
@@ -218,16 +213,18 @@ export default function CreateRecipe() {
                 </option>
               ))}
             </select>
-            <div></div>
+   
+            <div className={Style.containerDietsBtn}>
             {Array.from(input.diets).map((diet) => (
-              <div key={diet}>
-                <button onClick={() => handleDelete(diet)}>X</button>
-                <span>{diet}</span>
+              <div className= {Style.containerOnlyDietsBtn} key={diet}>
+                <button className={Style.dietsbtn} onClick={() => handleDelete(diet)}>X</button>
+                <span className={Style.dietsText}>{diet}</span>
               </div>
             ))}
+            </div>
           </div>
-
-          {errors.hasOwnProperty("name") ||
+        </div>
+        {errors.hasOwnProperty("name") ||
           errors.hasOwnProperty("summmary") ||
           errors.hasOwnProperty("healthScore") ? (
             <p className={Style.errorComplete}>
@@ -238,21 +235,13 @@ export default function CreateRecipe() {
               Create Recipe
             </button>
           )}
-          {errors.name && <p className={Style.error}>{errors.name}</p>}
-          {errors.summary && <p className={Style.error}>{errors.summary}</p>}
-          {errors.healthScore && (
-            <p className={Style.error}>{errors.healthScore}</p>
-          )}
-          {/*{errors.steps && <p className={Style.error}>{errors.steps}</p>} */}
         </form>
-
-        <div className={Style.imagen}>
-          <label className={Style.label}></label>
-          {input.image && (
-            <img className={Style.imageURL} src={input.image} alt="Recipe" />
-          )}
-        </div>
+              
+      
       </div>
+      
+      </div> 
+
       <Footer />
     </div>
   );

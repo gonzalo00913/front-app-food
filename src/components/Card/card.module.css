@@ -1,18 +1,18 @@
 .card {
   width: 100%;
   text-align: center;
-  padding: 5px;
   border-radius: 5px;
-  background-color: #c8d9eb;
-  height: 390px;
-  width: 340px;
+  background-color: #eeeeee;
+  height: 360px;
+  width: 320px;
   box-shadow: 3px 3px 5px rgb(0, 0, 0);
 }
 .cardImage {
   border-radius: 2px;
-  width: 300px;
+  width: 98%;
   border: 2px solid #ffffff;
-  margin: 20px;
+  margin: auto;
+
 }
 /* @keyframes flipAnimation {
 
@@ -25,12 +25,12 @@
 } */
 
 .cardImage:hover {
-  border: 2px solid green;
+  border: 3px solid #8bc436;
   /*  animation: flipAnimation 2.5s ease ; */
 }
 .card {
   position: relative;
-  margin: 8px;
+  margin:20px;
   margin-bottom: 30px;
   margin-top: 40px;
 }

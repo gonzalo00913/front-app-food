@@ -1,19 +1,18 @@
 .searchBar {
   background-color: #f7eec7;
-  height: 22px;
-  font-size: 22px;
-  border-radius: 8px;
-  border: 2px solid black;
+  height: 30px;
+  font-size: 25px;
+  border-radius: 5px;
+
 }
 .buttom {
   background-color: #34aa22;
   color: #f7eec7;
-  padding: 4px;
-  border-radius: 8px;
+  padding: 2px;
+  border-radius: 5px;
   width: 60px;
-  height: 29px;
-  box-shadow: 2px 2px 4px rgb(0, 0, 0);
-  margin-left: 10px;
+  height: 36px;
+  margin-left: -10px;
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   font-size: 15px;
 }

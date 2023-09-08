@@ -32,6 +32,7 @@ const Filter = ({ setOrden, setCurrentPage }) => {
 
   return (
     <div className={Style.filterAllContainer}>
+     
       <div className={Style.filterOneContainer}>
         <label className={Style.label} htmlFor="filter-type-diet-select">
           Typediet

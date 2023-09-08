@@ -10,14 +10,14 @@
 
 .PaginadoBtn {
   margin: 5px;
-  border-radius: 8px;
-  font-size: 17px;
+  border-radius: 5px;
+  font-size: 22px;
   font-weight: bolder;
   margin-top: 30px;
 }
 .PaginadoBtnClic {
-  font-size: 18px;
-  background-color: #3b9f1d;
+  font-size: 23px;
+  background-color: #8BC436;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
 }

@@ -1,11 +1,128 @@
-.formContainer {
-  text-align: center;
-
-  min-height: 100vh;
-  padding: 10px;
+.containerAllForm{
   display: flex;
   justify-content: center;
+  background-color: #8BC436;
+  width: 600px;
+  margin-left: 100px;
+  border-radius: 5px;
 }
+
+.containerFormNameSummaryHealthScore{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  width: 500px;
+
+}
+.flexInputText{
+  display: flex;
+  flex-direction: column;
+
+}
+.sizeTextForm{
+  font-size: 22px;
+  
+}
+.sizeInputText{
+  width: 400px;
+  height: 35px;
+  border-radius: 5px;
+}
+.sizeInputTextStep{
+  width: 404px;
+  height: 65px;
+  border-radius: 5px;
+}
+.sizeInputBtnImg{
+  font-size: 20px;
+  width: 140px;
+  margin: 15px;
+  margin-top: 15px;
+}
+.select{
+  width: 55%;
+  margin-left: 5px;
+  height: 30px;
+  font-size: 16px;
+  
+}
+.dietsbtn{
+  background-color: red;
+  color: wheat;
+  border: none;
+  width: 25px;
+  height: 20px;
+
+}
+.dietsText{
+  font-size: 20px;
+  margin-left: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  
+  
+}
+.containerDietsBtn{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  width: 85%;
+  
+}
+
+.button {
+  padding: 5px;
+  font-size: 22px;
+  margin-left: 50px;
+  border-radius:5px;
+  color: #000000;
+  background-color: #FFC966;
+  
+}
+.h2form{
+  text-align: center;
+  margin-top: 60px;
+  font-size: 35px;
+}
+
+.InputErrorMessage{
+  display: flex;
+  align-items: center;
+  width: 80%;
+  background-color: red;
+  height: 40px;
+  border-radius: 10px;
+}
+.error{
+margin-left: -320px;
+color: rgb(245, 20, 20);
+font-size: 14px;
+
+}
+.imageURL{
+  width: 15%;
+  margin: auto;
+  
+}
+.imgForm{
+  width: 300px;
+  background-color: red;
+  margin-left:20px;
+  margin-top: 30px;
+}
+.flexAllContainer{
+  display: flex;
+  width: 1000px;
+  height: 700px;
+  background-color: #FFC966;
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.leftFormContainer{
+
+}
+/* 
 
 .form {
   background-color: #c8d9eb;
@@ -67,16 +184,7 @@
   font-size: 10px;
 }
 
-.button {
-  margin-top: 65px;
-  width: 30%;
-  padding: 5px;
-  font-size: 22px;
-  border-radius: 10px;
-  color: #f7edc7;
-  background-color: #34aa22;
-  text-shadow: 2px 2px 4px rgb(0, 0, 0);
-}
+
 
 .containerTextBtn {
   display: flex;
@@ -118,7 +226,7 @@
 
   font-size: 30px;
 }
-
+ */
 /* responsive*/
 
 @media (max-width: 420px) {

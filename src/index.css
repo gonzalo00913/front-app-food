@@ -1,11 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-
-  background-color: #e0ecfb;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: 100%;
-  
+  background-color: rgb(243, 243, 243);
 }
 
 code {
@@ -14,5 +12,5 @@ code {
 }
 
 h1 {
-  color: black;
+  color: rgb(20, 20, 20);
 }

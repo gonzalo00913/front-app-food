@@ -6,12 +6,13 @@ import Paginado from "../Paginado/Paginado";
 import Style from "../Home/home.module.css";
 import Filter from "../Filter/Filter";
 import Footer from "../Footer/Footer";
+import imgBaner from "../img/homemade.png";
 
 const Home = ({ recipes, getAllRecipes }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [orden, setOrden] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const recipesPerPage = 9;
+  const recipesPerPage = 6;
 
   useEffect(() => {
     setIsLoading(true);
@@ -40,11 +41,17 @@ const Home = ({ recipes, getAllRecipes }) => {
   return (
     <div>
       <div>
+      <img className={Style.baner} src={imgBaner} alt="" />
+      </div>
+      <h2 className={Style.titleHome}>Explore Recipes</h2>
+      <div>
         {isLoading ? (
           <div className={Style.loader}></div>
-        ) : (
-          <div>
+          ) : (
+            <div>
+          
             <div className={Style.containerHomeColor}>
+
               <Filter
                 setCurrentPage={setCurrentPage}
                 setOrden={setOrden}
