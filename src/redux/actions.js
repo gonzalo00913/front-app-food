@@ -15,8 +15,8 @@ import axios from "axios";
 export const getAllRecipes = () => {
   return async function (dispatch) {
     try {
-      /* const response = await axios("https://back-food-app-9rem.onrender.com/recipes/all"); */
-const response = await axios("http://localhost:3001/recipes/all");
+      const response = await axios("https://back-food-app-9rem.onrender.com/recipes/all");
+/* const response = await axios("http://localhost:3001/recipes/all"); */
       const recipes = response.data;
 
       dispatch({
