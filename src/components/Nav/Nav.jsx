@@ -44,7 +44,7 @@ const Nav = () => {
               </Link>
             </div>
             <div>
-              <Link className={Style.link} /* to="/Form" */ onClick={message}>
+              <Link className={Style.link} to="/form">
               {/*   <i class="fa-solid fa-kitchen-set"></i> */}
                 <span className={Style.nombreIcono}>CREATE</span>
               </Link>
