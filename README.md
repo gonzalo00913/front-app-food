@@ -1,6 +1,6 @@
 # Food App
 
-Food App es una aplicación que te permite descubrir y explorar más de 100 recetas. Puedes ver los detalles de cada receta, buscarlas por nombre y también crear tus propias recetas.
+¡Homemade Delights! es una aplicación que te permite descubrir y explorar más de 100 recetas. Puedes ver los detalles de cada receta, buscarlas por nombre y también crear tus propias recetas.
 
 ## Tecnologías utilizadas
 
@@ -20,3 +20,4 @@ Food App es una aplicación que te permite descubrir y explorar más de 100 rece
 - Haz clic en una receta para ver más detalles.
 - Para crear una receta, ve a la sección de creación de recetas y sigue las instrucciones.
 
+link: food-app-gonzalo-masa.netlify.app/
