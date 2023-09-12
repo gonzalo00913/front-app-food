@@ -20,4 +20,4 @@
 - Haz clic en una receta para ver más detalles.
 - Para crear una receta, ve a la sección de creación de recetas y sigue las instrucciones.
 
-link: food-app-gonzalo-masa.netlify.app/
+link:/https://food-app-gonzalo-masa.netlify.app/
