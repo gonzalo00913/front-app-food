@@ -1,13 +1,13 @@
 .containerDetail {
   color: white;
   text-align: center;
-  width: 1600px;
-  margin: auto;
-  background-color: #c8d9eb;
   padding-bottom: 30px;
   padding-left: 30px;
   border-radius: 5px;
   animation: fade-in 1s ease-in;
+  height: 845px;
+
+ 
 }
 @keyframes fade-in {
   from {
@@ -22,7 +22,8 @@
 
 .containerDetails {
   display: flex;
-  margin-top: 80px;
+  
+  
 }
 .img {
   width: 750px;
@@ -30,15 +31,17 @@
   border: 2px solid #f7edc7;
 }
 .containerResume {
-  margin-top: 35px;
+  margin-top: 50px;
   margin-left: 30px;
+  margin: auto;
   text-align: left;
-  color: #2e2d2d;
+  color: aliceblue;
   padding: 6px;
+  
 }
 .h2 {
   text-align: left;
-  color: #2e2d2d;
+  color: aliceblue;
 }
 .btn {
   background-color: #07700b;
@@ -52,11 +55,11 @@
 }
 
 .resume {
-  color: rgb(0, 0, 0);
+  color: aliceblue;
   font-size: 19px;
 }
 .diets {
   font-weight: bold;
   margin: 5px;
-  color: rgb(0, 0, 0);
+ color: aliceblue;
 }

@@ -3,6 +3,7 @@ import { getRecipesById } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import Style from "../Detail/detail.module.css";
+import backgroundDetail from "../img/background-detail.jpeg";
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,12 @@ const Details = () => {
   }, [dispatch, id]);
   console.log(data);
   return (
-    <div>
+    <div className={Style.bgColorForm} style={{ backgroundImage: `url(${backgroundDetail})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+            <Link to="/">
+        <button type="button" className={Style.btn}>
+          Back
+        </button>
+      </Link>
       <div className={Style.containerDetail}>
         {data && (
           <div className={Style.containerDetails}>
@@ -42,11 +48,7 @@ const Details = () => {
         )}
         <div className={Style.parrafo}></div>
       </div>
-      <Link to="/">
-        <button type="button" className={Style.btn}>
-          Back
-        </button>
-      </Link>
+
     </div>
   );
 };
