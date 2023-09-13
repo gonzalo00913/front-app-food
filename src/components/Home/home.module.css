@@ -91,3 +91,130 @@
   transform: skewY(-4deg);
   transform-origin: top left;
 }
+
+
+@media (max-width: 300px) {
+
+  .titleHome {
+    margin-top: 50px;
+    font-weight: bolder;
+    font-size: 25px;
+ 
+  
+  }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 80px;
+    font-weight: bolder;
+    font-size: 26px;
+
+  
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 550px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 120px;
+    font-weight: bolder;
+    font-size: 28px;
+   }
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 190px;
+    font-weight: bolder;
+    font-size: 29px;
+    text-align: center;
+    color: #232323;
+  
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 250px;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    color: #232323;
+  
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 340px;
+    font-weight: bolder;
+    font-size: 32px;
+    text-align: center;
+    color: #232323;
+  
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 420px;
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: center;
+    color: #232323;
+  
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 500px;
+    font-weight: bolder;
+    font-size: 32px;
+    text-align: center;
+    color: #232323;
+  
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 600px;
+    font-weight: bolder;
+    font-size: 32px;
+    text-align: center;
+    color: #232323;
+  
+  }
+}
+
+
+@media screen and (min-width: 1600px) and (max-width: 1800px) {
+
+  .titleHome {
+    margin: auto;
+    margin-top: 680px;
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: center;
+    color: #232323;
+  
+  }
+}

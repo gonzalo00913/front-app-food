@@ -42,7 +42,7 @@ const Details = () => {
         )}
         <div className={Style.parrafo}></div>
       </div>
-      <Link to="/home">
+      <Link to="/">
         <button type="button" className={Style.btn}>
           Back
         </button>
