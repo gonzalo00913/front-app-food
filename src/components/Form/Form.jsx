@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Style from "../Form/form.module.css";
 import Footer from "../Footer/Footer";
 import imgForm from "../img/imgForm.jpeg";
+import backgroundForm from "../img/background-form.jpeg";
 
 function controlForm(input) {
   const reg = new RegExp("^[0-9]+$");
@@ -136,7 +137,7 @@ export default function CreateRecipe() {
   }
 
   return (
-    <div className={Style.bgColorForm}>
+    <div className={Style.bgColorForm} style={{ backgroundImage: `url(${backgroundForm})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} >
       <NavLink to="/">
         <button className={Style.backBtn}>Back</button>
       </NavLink>
@@ -247,7 +248,4 @@ export default function CreateRecipe() {
       <Footer />
     </div>
   );
-}
-
-{
 }
