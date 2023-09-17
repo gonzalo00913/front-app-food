@@ -6,8 +6,6 @@
   border-radius: 5px;
   animation: fade-in 1s ease-in;
   height: 845px;
-
- 
 }
 @keyframes fade-in {
   from {
@@ -22,17 +20,21 @@
 
 .containerDetails {
   display: flex;
-  
-  
+
+  justify-content: space-evenly;
+  width: 1500px;
+  margin: auto;
+
 }
 .img {
-  width: 750px;
+  width: 700px;
   border-radius: 12px;
   border: 2px solid #f7edc7;
 }
 .containerResume {
   margin-top: 50px;
   margin-left: 30px;
+  width: 700px;
   margin: auto;
   text-align: left;
   color: aliceblue;
@@ -61,5 +63,5 @@
 .diets {
   font-weight: bold;
   margin: 5px;
- color: aliceblue;
+  color: aliceblue;
 }

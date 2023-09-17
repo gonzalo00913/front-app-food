@@ -37,3 +37,10 @@
   text-decoration: none;
   color: rgb(23, 145, 189);
 }
+
+.p {
+  margin: 10px;
+  font-size: 20px;
+  text-decoration: none;  
+  color: rgb(30, 30, 30);
+}
