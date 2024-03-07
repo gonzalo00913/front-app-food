@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar";
-import Style from "../Nav/nav.module.css";
-import imgLogo from "../img/food-icon.jpeg";
+/* import SearchBar from "../SearchBar/SearchBar"; */
+import style from "../Nav/nav.module.css";
+import iconNav from "../img/food-icon.jpeg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -22,36 +22,36 @@ const Nav = () => {
   }
   return (
     <div>
-      <div className={Style.nav}>
+      <div className={style.containerNav}>
         <div className="">
-          <img className={Style.ban} src={imgLogo} alt="logo" />
+          <img className={style.iconNav} src={iconNav} alt="logo" />
         </div>
-        <div className={Style.containerNavSearch}>
-          <div className={Style.containerLinks}>
+        <div className={style.containerNavSearch}>
+          <div className={style.containerLinks}>
             <div>
               <Link
-                className={Style.link}
-                /* to="/About" */ onClick={message}
+                className={style.link}
+                to="/" onClick={message}
               >
-            {/*     <i class="fa-solid fa-address-card"></i> */}
-                <span className={Style.nombreIcono}>ABOUT</span>
+                <i class="fa-solid fa-house"></i>
+                <span className={style.nombreIcono}>Home</span>
               </Link>
             </div>
-            <div className={Style.flexIcono}>
-              <Link className={Style.link} to="/">
-                {/* <i class="fa-solid fa-utensils"></i> */}
-                <span className={Style.nombreIcono}>RECIPES</span>
+            <div className={style.flexIcono}>
+              <Link className={style.link} to="/">
+                <i class="fa-solid fa-utensils"></i>
+                <span className={style.nombreIcono}>Recipes</span>
               </Link>
             </div>
             <div>
-              <Link className={Style.link} to="/form">
-              {/*   <i class="fa-solid fa-kitchen-set"></i> */}
-                <span className={Style.nombreIcono}>CREATE</span>
+              <Link className={style.link} to="/form">
+                <i class="fa-solid fa-kitchen-set"></i>
+                <span className={style.nombreIcono}>Create</span>
               </Link>
             </div>
           </div>
-          <div className={Style.searchBar}>
-            <SearchBar />
+          <div className={style.searchBar}>
+         {/*    <SearchBar /> */}
           </div>
         </div>
 

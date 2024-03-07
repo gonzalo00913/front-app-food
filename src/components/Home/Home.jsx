@@ -3,16 +3,16 @@ import { getAllRecipes } from "../../redux/actions";
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import Paginado from "../Paginado/Paginado";
-import Style from "../Home/home.module.css";
+import style from "../Home/home.module.css";
 import Filter from "../Filter/Filter";
-import Footer from "../Footer/Footer";
+
 import imgBaner from "../img/homemade.png";
 
 const Home = ({ recipes, getAllRecipes }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [orden, setOrden] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const recipesPerPage = 6;
+  const recipesPerPage = 9;
 
   useEffect(() => {
     setIsLoading(true);
@@ -39,18 +39,19 @@ const Home = ({ recipes, getAllRecipes }) => {
   };
 
   return (
-    <div>
+    
+    <div >
       <div>
-      <img className={Style.baner} src={imgBaner} alt="" />
+      <img className={style.baner} src={imgBaner} alt="" />
       </div>
-      <h2 className={Style.titleHome}>Explore Recipes</h2>
+      <div className={style.containerAllRecipes}>
       <div>
         {isLoading ? (
-          <div className={Style.loader}></div>
+          <div className={style.loader}></div>
           ) : (
             <div>
           
-            <div className={Style.containerHomeColor}>
+            <div className={style.containerHomeColor}>
 
               <Filter
                 setCurrentPage={setCurrentPage}
@@ -58,7 +59,7 @@ const Home = ({ recipes, getAllRecipes }) => {
                 orden={orden}
               />
 
-              <div className={Style.containerHome}>
+              <div className={style.containerHome}>
                 {currentRecipes.length > 0 ? (
                   currentRecipes.map((recipe) => (
                     <Card recipe={recipe} key={recipe.id} />
@@ -69,7 +70,7 @@ const Home = ({ recipes, getAllRecipes }) => {
               </div>
 
               {isLoading ? (
-                <div className={Style.loader}>loading...</div>
+                <div className={style.loader}>loading...</div>
               ) : (
                 <div>{}</div>
               )}
@@ -82,8 +83,9 @@ const Home = ({ recipes, getAllRecipes }) => {
           </div>
         )}
 
-        <Footer />
+</div>
       </div>
+    
     </div>
   );
 };

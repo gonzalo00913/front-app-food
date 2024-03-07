@@ -14,7 +14,7 @@ const Footer = () => {
         </p>
       </div>
       <div className={Style.contact}>
-        <a className={Style.p} href="https://portfoliogem.netlify.app/">
+        <a className={Style.p} href="https://gonzalomasa.netlify.app/">
         <i class="fa-solid fa-globe"></i> Portfolio
         </a>
 

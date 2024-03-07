@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getRecipesById } from "../../redux/actions";
-import Style from "../Card/card.module.css";
+import style from "../Card/card.module.css";
 
 const Card = ({ recipe, getRecipesById }) => {
   console.log("Recipe:", recipe);
@@ -11,25 +11,25 @@ const Card = ({ recipe, getRecipesById }) => {
   };
 
   return (
-    <div className={Style.containerCardAll}>
-      <div className={Style.card}>
+    <div className={style.containerCardAll}>
+      <div className={style.card}>
         <Link
-          className={Style.link}
+          className={style.link}
           to={`/detail/${recipe.id}`}
           onClick={handleRecipeClick}
         >
           <img
-            className={Style.cardImage}
+            className={style.cardImage}
             src={recipe.image}
             alt={recipe.name}
           />
         </Link>
-        <h2 className={Style.cardName}>{recipe.name}</h2>
-        <div className={Style.ul}>
+        <h2 className={style.cardName}>{recipe.name}</h2>
+   {/*      <div className={style.ul}>
           {recipe.Diets.map((diet) => (
-            <span className={Style.span}>{diet.name}</span>
+            <span className={style.span}>{diet.name}</span>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const Details = () => {
   }, [dispatch, id]);
   console.log(data);
   return (
-    <div className={Style.bgColorForm} style={{ backgroundImage: `url(${backgroundDetail})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+    <div className={Style.bgColorForm}>
             <Link to="/">
         <button type="button" className={Style.btn}>
           Back

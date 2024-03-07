@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import Style from "../About/about.module.css";
 
 import { Link } from "react-router-dom";
@@ -57,3 +57,4 @@ const About = () => {
 };
 
 export default About;
+ */

@@ -4,8 +4,8 @@ import { getTypeDiets, createRecipe } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import Style from "../Form/form.module.css";
 import Footer from "../Footer/Footer";
-import imgForm from "../img/imgForm.jpeg";
-import backgroundForm from "../img/background-form.jpeg";
+/* import imgForm from "../img/imgForm.jpeg"; */
+/* import backgroundForm from "../img/background-form.jpeg"; */
 
 function controlForm(input) {
   const reg = new RegExp("^[0-9]+$");
@@ -137,13 +137,13 @@ export default function CreateRecipe() {
   }
 
   return (
-    <div className={Style.bgColorForm} style={{ backgroundImage: `url(${backgroundForm})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} >
+    <div className={Style.bgColorForm} /* style={{ backgroundImage: `url(${backgroundForm})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} */ >
       <NavLink to="/">
         <button className={Style.backBtn}>Back</button>
       </NavLink>
       <div  className={Style.flexAllContainer}>
       <div className={Style.leftFormContainer}>
-       <img className={Style.imgForm} src={imgForm} alt="logo" />
+       {/* <img className={Style.imgForm} src={imgForm} alt="logo" /> */}
       </div>
       <div className={Style.containerAllForm}>
         <form onSubmit={(e) => handleSubmit(e)}>

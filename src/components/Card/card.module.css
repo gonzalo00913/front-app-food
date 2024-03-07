@@ -1,19 +1,9 @@
-.card {
-  width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #eeeeee;
-  height: 360px;
-  width: 320px;
-  box-shadow: 3px 3px 5px rgb(0, 0, 0);
-}
-.cardImage {
-  border-radius: 2px;
-  width: 98%;
-  border: 2px solid #ffffff;
-  margin: auto;
 
-}
+/* .containerAllrecipes{
+  background-color: red;
+
+} */
+
 /* @keyframes flipAnimation {
 
   0% {
@@ -24,24 +14,12 @@
   }
 } */
 
-.cardImage:hover {
+/* .cardImage:hover {
   border: 3px solid #8bc436;
-  /*  animation: flipAnimation 2.5s ease ; */
-}
-.card {
-  position: relative;
-  margin:20px;
-  margin-bottom: 30px;
-  margin-top: 40px;
+   animation: flipAnimation 2.5s ease ;
 }
 
-.cardName {
-  color: #282828;
-  font-size: 19px;
-  width: 320px;
-  margin: auto;
-  margin-bottom: 10px;
-}
+
 
 .span {
   color: #282828;
@@ -53,90 +31,28 @@
   text-decoration: none;
 }
 
-@media (max-width: 300px) {
-  .card {
-    width: 80%;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #eeeeee;
-    height: 300px;
-    width: 250px;
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
-  }
-  .cardImage {
-    border-radius: 2px;
-    width: 98%;
-    border: 2px solid #ffffff;
-    margin: auto;
-  
-  }
- 
-  .card {
-    position: relative;
-    margin:20px;
-    margin-bottom: 30px;
-    margin-top: 40px;
-  }
-  
-  .cardName {
-    color: #282828;
-    font-size: 19px;
-    width: 200px;
-    margin: auto;
-    margin-bottom: 10px;
-  }
-  
-  .span {
-    color: #282828;
-    width: 90px;
-  }
-  
-  .link {
-    list-style: none;
-    text-decoration: none;
-  }
+ */
+
+ .cardName {
+  color: #282828;
+  font-size: 17px;
+  width: 290px;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
-@media screen and (min-width: 300px) and (max-width: 500px) {
-  .card {
-    width: 80%;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #eeeeee;
-    height: 320px;
-    width: 250px;
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
-  }
-  .cardImage {
-    border-radius: 2px;
-    width: 98%;
-    border: 2px solid #ffffff;
-    margin: auto;
-  
-  }
- 
-  .card {
-    position: relative;
-    margin:20px;
-    margin-bottom: 30px;
-    margin-top: 40px;
-  }
-  
-  .cardName {
-    color: #282828;
-    font-size: 19px;
-    width: 200px;
-    margin: auto;
-    margin-bottom: 10px;
-  }
-  
-  .span {
-    color: #282828;
-    width: 90px;
-  }
-  
-  .link {
-    list-style: none;
-    text-decoration: none;
-  }
+.card {
+  text-align: center;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  height: 250px;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0);
+  margin-top: 20px;
+}
+.cardImage {
+  border-radius: 2px;
+  border: 2px solid #ffffff;
+  margin-top: 6px;
+  width: 250px;
+
 } 
