@@ -14,21 +14,22 @@ const Footer = () => {
         </p>
       </div>
       <div className={Style.contact}>
-        <a className={Style.p} href="https://gonzalomasa.netlify.app/">
+        <a className={Style.p} href="https://gonzalomasa.netlify.app/" target="_blanck">
         <i class="fa-solid fa-globe"></i> Portfolio
         </a>
 
-        <a className={Style.l} href="https://www.linkedin.com/in/gonzalo-masa/">
+        <a className={Style.l} href="https://www.linkedin.com/in/gonzalo-masa/" target="_blanck">
           <i className="fa-brands fa-linkedin"></i> LinkedIn
         </a>
 
-        <a className={Style.g} href="https://github.com/gonzalo00913">
+        <a className={Style.g} href="https://github.com/gonzalo00913" target="_blanck">
           <i className="fa-brands fa-github"></i> Github
         </a>
         <a
           className={Style.t}
           href="https://twitter.com/GonzaloMsa"
           rel="noreferrer"
+          target="_blanck"
         >
           <i className="fa-brands fa-twitter"></i> Twitter
         </a>

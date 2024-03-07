@@ -138,12 +138,12 @@ export default function CreateRecipe() {
 
   return (
     <div className={Style.bgColorForm} /* style={{ backgroundImage: `url(${backgroundForm})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} */ >
-      <NavLink to="/">
+ {/*      <NavLink to="/">
         <button className={Style.backBtn}>Back</button>
-      </NavLink>
+      </NavLink> */}
       <div  className={Style.flexAllContainer}>
       <div className={Style.leftFormContainer}>
-       {/* <img className={Style.imgForm} src={imgForm} alt="logo" /> */}
+   {/*     <img className={Style.imgForm} src={imgForm} alt="logo" /> */}
       </div>
       <div className={Style.containerAllForm}>
         <form onSubmit={(e) => handleSubmit(e)}>
@@ -159,7 +159,7 @@ export default function CreateRecipe() {
                 <input className={Style.sizeInputText} type="text" name="name" value={input.name} onChange={(e) => handleChange(e)} onKeyPress={(e) => handleChange(e)}
                 />
             
-                {errors.name && <p className={Style.error}>{errors.name}</p>}
+                {/* {errors.name && <p className={Style.error}>{errors.name}</p>} */}
               </div>
             </div>
 
@@ -170,7 +170,7 @@ export default function CreateRecipe() {
               <div >
               <input className={Style.sizeInputText} type="text" name="summary" value={input.summary} onChange={(e) => handleChange(e)}/>
             </div>
-            {errors.summary && <p className={Style.error}>{errors.summary}</p>}
+            {/* {errors.summary && <p className={Style.error}>{errors.summary}</p>} */}
             </div>
           </div>
 
@@ -180,7 +180,7 @@ export default function CreateRecipe() {
               <div>
               <div className={Style.InputErrorMessage}>
                <input className={Style.sizeInputText} type="number" name="healthScore" value={input.healthScore} onChange={(e) => handleChange(e)}/>
-                {errors.healthScore && (<p className={Style.error}>{errors.healthScore}</p>)}
+                {/* {errors.healthScore && (<p className={Style.error}>{errors.healthScore}</p>)} */}
               </div>
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function CreateRecipe() {
           </div>
 
           <div>
-            <label className={Style.sizeTextForm}>Imagen</label>
+            <label className={Style.sizeTextForm}></label>
             <input className={Style.sizeInputBtnImg} type="file" onChange={handleImageUpload}/>
             <div className={Style.imagen}>
           <label className={Style.label}></label>
@@ -207,7 +207,7 @@ export default function CreateRecipe() {
           </div>
           
           <div>
-            <label className={Style.sizeTextForm} >Select Diet</label>
+            <label className={Style.sizeTextForm} ></label>
             <select className={Style.select}  onChange={(e) => handleSelect(e)}>
               <option value="">Select a diet</option>
               {listDiets.map((t) => (

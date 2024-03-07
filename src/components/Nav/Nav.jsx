@@ -29,13 +29,13 @@ const Nav = () => {
         <div className={style.containerNavSearch}>
           <div className={style.containerLinks}>
             <div>
-              <Link
+       {/*        <Link
                 className={style.link}
                 to="/" onClick={message}
               >
                 <i class="fa-solid fa-house"></i>
                 <span className={style.nombreIcono}>Home</span>
-              </Link>
+              </Link> */}
             </div>
             <div className={style.flexIcono}>
               <Link className={style.link} to="/">

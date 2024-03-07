@@ -25,7 +25,7 @@ const Card = ({ recipe, getRecipesById }) => {
           />
         </Link>
         <h2 className={style.cardName}>{recipe.name}</h2>
-   {/*      <div className={style.ul}>
+    {/*     <div className={style.ul}>
           {recipe.Diets.map((diet) => (
             <span className={style.span}>{diet.name}</span>
           ))}

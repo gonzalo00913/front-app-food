@@ -21,10 +21,7 @@
 
 
 
-.span {
-  color: #282828;
-  width: 120px;
-}
+
 
 .link {
   list-style: none;
@@ -56,3 +53,11 @@
   width: 250px;
 
 } 
+
+.span {
+  color: #282828;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}

@@ -6,3 +6,24 @@ body {
   background-color: rgb(219, 219, 219);
 }
 
+.style-btn-ss{
+  display: inline-block;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.style-btn-ss {
+  background-color: #8BC436;
+  color: #303030;
+}
+
+.style-btn-ss:hover {
+  background-color: #8BC436;
+}
