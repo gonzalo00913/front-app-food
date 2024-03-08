@@ -39,7 +39,7 @@ const SearchBar = () => {
           type="submit"
           onClick={(event) => handleSubmit(event)}
         >
-          Search
+          🔍
         </button>
       </div>
     </div>

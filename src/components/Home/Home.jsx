@@ -5,6 +5,7 @@ import Card from "../Card/Card";
 import Paginado from "../Paginado/Paginado";
 import style from "../Home/home.module.css";
 import Filter from "../Filter/Filter";
+import SearchBar from "../SearchBar/SearchBar";
 
 import imgBaner from "../img/homemade.png";
 
@@ -39,53 +40,49 @@ const Home = ({ recipes, getAllRecipes }) => {
   };
 
   return (
-    
-    <div >
+    <div>
       <div>
-      <img className={style.baner} src={imgBaner} alt="" />
+        <img className={style.baner} src={imgBaner} alt="" />
       </div>
       <div className={style.containerAllRecipes}>
-      <div>
-        {isLoading ? (
-          <div className={style.loader}></div>
+        <SearchBar/>
+        <div>
+          {isLoading ? (
+            <div className={style.loader}></div>
           ) : (
             <div>
-          
-            <div className={style.containerHomeColor}>
+              <div className={style.containerHomeColor}>
+                <Filter
+                  setCurrentPage={setCurrentPage}
+                  setOrden={setOrden}
+                  orden={orden}
+                />
 
-              <Filter
-                setCurrentPage={setCurrentPage}
-                setOrden={setOrden}
-                orden={orden}
-              />
+                <div className={style.containerHome}>
+                  {currentRecipes.length > 0 ? (
+                    currentRecipes.map((recipe) => (
+                      <Card recipe={recipe} key={recipe.id} />
+                    ))
+                  ) : (
+                    <p>Recipe not found!</p>
+                  )}
+                </div>
 
-              <div className={style.containerHome}>
-                {currentRecipes.length > 0 ? (
-                  currentRecipes.map((recipe) => (
-                    <Card recipe={recipe} key={recipe.id} />
-                  ))
+                {isLoading ? (
+                  <div className={style.loader}>loading...</div>
                 ) : (
-                  <p>Recipe not found!</p>
+                  <div>{}</div>
                 )}
               </div>
-
-              {isLoading ? (
-                <div className={style.loader}>loading...</div>
-              ) : (
-                <div>{}</div>
-              )}
+              <Paginado
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+              />
             </div>
-            <Paginado
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-            />
-          </div>
-        )}
-
-</div>
+          )}
+        </div>
       </div>
-    
     </div>
   );
 };

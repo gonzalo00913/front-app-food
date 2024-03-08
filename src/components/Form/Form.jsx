@@ -11,7 +11,8 @@ function controlForm(input) {
   const reg = new RegExp("^[0-9]+$");
   let errors = {};
   if (!input.name) errors.name = "*Please enter the name of the recipe";
-  if (!input.summary) errors.summary = "*Please enter the summary of the recipe";
+  if (!input.summary)
+    errors.summary = "*Please enter the summary of the recipe";
   if (
     input.healthScore < 0 ||
     input.healthScore > 100 ||
@@ -137,113 +138,149 @@ export default function CreateRecipe() {
   }
 
   return (
-    <div className={Style.bgColorForm} /* style={{ backgroundImage: `url(${backgroundForm})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} */ >
- {/*      <NavLink to="/">
+    <div
+      className={
+        Style.bgColorForm
+      } /* style={{ backgroundImage: `url(${backgroundForm})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} */
+    >
+      {/*      <NavLink to="/">
         <button className={Style.backBtn}>Back</button>
       </NavLink> */}
-      <div  className={Style.flexAllContainer}>
-      <div className={Style.leftFormContainer}>
-   {/*     <img className={Style.imgForm} src={imgForm} alt="logo" /> */}
-      </div>
-      <div className={Style.containerAllForm}>
-        <form onSubmit={(e) => handleSubmit(e)}>
-
-          <div className={Style.containerFormNameSummaryHealthScore}>
-            <div >
-            <div className={Style.flexInputText}>
-              <div >
-                <label className={Style.sizeTextForm} >Name</label>
-              </div>
-              <div className={Style.InputErrorMessage}>
-            
-                <input className={Style.sizeInputText} type="text" name="name" value={input.name} onChange={(e) => handleChange(e)} onKeyPress={(e) => handleChange(e)}
-                />
-            
-                {/* {errors.name && <p className={Style.error}>{errors.name}</p>} */}
-              </div>
-            </div>
-
-            <div className={Style.flexInputText}>
-              <label className={Style.sizeTextForm}>Summary</label>
-              </div>
-              <div className={Style.InputErrorMessage}>
-              <div >
-              <input className={Style.sizeInputText} type="text" name="summary" value={input.summary} onChange={(e) => handleChange(e)}/>
-            </div>
-            {/* {errors.summary && <p className={Style.error}>{errors.summary}</p>} */}
-            </div>
-          </div>
-
-          <div>
-            <div className={Style.flexInputText}>
-              <label className={Style.sizeTextForm}>HealthScore</label>
+      <div className={Style.flexAllContainer}>
+        <div className={Style.leftFormContainer}>
+          {/*     <img className={Style.imgForm} src={imgForm} alt="logo" /> */}
+        </div>
+        <div className={Style.containerAllForm}>
+          <form onSubmit={(e) => handleSubmit(e)}>
+            <div className={Style.containerFormNameSummaryHealthScore}>
               <div>
-              <div className={Style.InputErrorMessage}>
-               <input className={Style.sizeInputText} type="number" name="healthScore" value={input.healthScore} onChange={(e) => handleChange(e)}/>
-                {/* {errors.healthScore && (<p className={Style.error}>{errors.healthScore}</p>)} */}
+                <div className={Style.flexInputText}>
+                  <div>
+                    <label className={Style.sizeTextForm}>Name</label>
+                  </div>
+                  <div className={Style.InputErrorMessage}>
+                    <input
+                      className={Style.sizeInputText}
+                      type="text"
+                      name="name"
+                      value={input.name}
+                      onChange={(e) => handleChange(e)}
+                      onKeyPress={(e) => handleChange(e)}
+                    />
+
+                    {/* {errors.name && <p className={Style.error}>{errors.name}</p>} */}
+                  </div>
+                </div>
+
+                <div className={Style.flexInputText}>
+                  <label className={Style.sizeTextForm}>Summary</label>
+                </div>
+                <div className={Style.InputErrorMessage}>
+                  <div>
+                    <input
+                      className={Style.sizeInputText}
+                      type="text"
+                      name="summary"
+                      value={input.summary}
+                      onChange={(e) => handleChange(e)}
+                    />
+                  </div>
+                  {/* {errors.summary && <p className={Style.error}>{errors.summary}</p>} */}
+                </div>
               </div>
+
+              <div>
+                <div className={Style.flexInputText}>
+                  <label className={Style.sizeTextForm}>HealthScore</label>
+                  <div>
+                    <div className={Style.InputErrorMessage}>
+                      <input
+                        className={Style.sizeInputText}
+                        type="number"
+                        name="healthScore"
+                        value={input.healthScore}
+                        onChange={(e) => handleChange(e)}
+                      />
+                      {/* {errors.healthScore && (<p className={Style.error}>{errors.healthScore}</p>)} */}
+                    </div>
+                  </div>
+                </div>
+
+                <div className={Style.flexInputText}>
+                  <label className={Style.sizeTextForm}>Step by step</label>
+                  <div>
+                    <textarea
+                      className={Style.sizeInputTextStep}
+                      name="steps"
+                      value={stepDescription}
+                      onChange={handleChangeStep}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label className={Style.sizeTextForm}></label>
+                <input
+                  className={Style.sizeInputBtnImg}
+                  type="file"
+                  onChange={handleImageUpload}
+                />
+                <div className={Style.imagen}>
+                  <label className={Style.label}></label>
+                  {input.image && (
+                    <img
+                      className={Style.imageURL}
+                      src={input.image}
+                      alt="Recipe"
+                    />
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <label className={Style.sizeTextForm}></label>
+                <select
+                  className={Style.select}
+                  onChange={(e) => handleSelect(e)}
+                >
+                  <option value="">Select a diet</option>
+                  {listDiets.map((t) => (
+                    <option key={t.name} value={t.name}>
+                      {t.name}
+                    </option>
+                  ))}
+                </select>
+
+                <div className={Style.containerDietsBtn}>
+                  {Array.from(input.diets).map((diet) => (
+                    <div className={Style.containerOnlyDietsBtn} key={diet}>
+                      <button
+                        className={Style.dietsbtn}
+                        onClick={() => handleDelete(diet)}
+                      >
+                        X
+                      </button>
+                      <span className={Style.dietsText}>{diet}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-
-            
-
-            <div className={Style.flexInputText}>
-              <label className={Style.sizeTextForm}>Step by step</label>
-            <div>
-                <textarea className={Style.sizeInputTextStep} name="steps" value={stepDescription} onChange={handleChangeStep}/>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <label className={Style.sizeTextForm}></label>
-            <input className={Style.sizeInputBtnImg} type="file" onChange={handleImageUpload}/>
-            <div className={Style.imagen}>
-          <label className={Style.label}></label>
-          {input.image && (
-            <img className={Style.imageURL} src={input.image} alt="Recipe" />
-          )}
+            {errors.hasOwnProperty("name") ||
+            errors.hasOwnProperty("summmary") ||
+            errors.hasOwnProperty("healthScore") ? (
+              <p className={Style.errorComplete}>
+                Please complete all the inputs to create your recipe
+              </p>
+            ) : (
+              <button className={Style.button} type="submit">
+                Create Recipe
+              </button>
+            )}
+          </form>
         </div>
-          </div>
-          
-          <div>
-            <label className={Style.sizeTextForm} ></label>
-            <select className={Style.select}  onChange={(e) => handleSelect(e)}>
-              <option value="">Select a diet</option>
-              {listDiets.map((t) => (
-                <option key={t.name} value={t.name}>
-                  {t.name}
-                </option>
-              ))}
-            </select>
-   
-            <div className={Style.containerDietsBtn}>
-            {Array.from(input.diets).map((diet) => (
-              <div className= {Style.containerOnlyDietsBtn} key={diet}>
-                <button className={Style.dietsbtn} onClick={() => handleDelete(diet)}>X</button>
-                <span className={Style.dietsText}>{diet}</span>
-              </div>
-            ))}
-            </div>
-          </div>
-        </div>
-        {errors.hasOwnProperty("name") ||
-          errors.hasOwnProperty("summmary") ||
-          errors.hasOwnProperty("healthScore") ? (
-            <p className={Style.errorComplete}>
-              Please complete all the inputs to create your recipe
-            </p>
-          ) : (
-            <button className={Style.button} type="submit">
-              Create Recipe
-            </button>
-          )}
-        </form>
-              
-      
       </div>
-      
-      </div> 
 
       <Footer />
     </div>
